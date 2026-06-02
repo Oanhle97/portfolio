@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Validus — Oanh Le</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bungee&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+<link href="casestudy.css" rel="stylesheet">
+</head>
+<body>
+<svg class="defs" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+  <filter id="rough"><feTurbulence type="fractalNoise" baseFrequency="0.013 0.02" numOctaves="2" seed="4" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="4.5" xChannelSelector="R" yChannelSelector="G"/></filter>
+  <filter id="rough2"><feTurbulence type="fractalNoise" baseFrequency="0.02 0.035" numOctaves="2" seed="11" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="3" xChannelSelector="R" yChannelSelector="G"/></filter>
+</svg>
+<div class="dust"></div><div class="grain"></div><div class="vig"></div>
+<main class="cs">
+
+  <header class="cs-hero">
+    <h1 class="cs-title">Validus Investment web app</h1>
+    <p class="cs-sub">Investor-side web app for Validus, Southeast Asia's leading SME lending marketplace — S$5b+ disbursed across 120,000+ loans.</p>
+    <div class="cs-meta">Product Designer · 2020 · Web app</div>
+  </header>
+  <div class="cs-figure"><div class="ph wide"><span class="corner">Validus</span><span class="ph-label">Investor web app, portfolio, listings & analytics</span></div></div>
+  <div class="rule"></div>
+  <section class="sec"><h2 class="sec-label">The business problem</h2>
+    <p>Validus runs a two-sided marketplace: SME borrowers on one side, accredited investors funding their loans on the other. The platform's growth depends on both sides scaling together, but the two user types have nothing in common. Borrowers are SME owners managing cash flow; investors are finance professionals managing capital. The Investment web app had to feel like a product built for investors specifically, not a shared interface compromised between two audiences.</p>
+  </section>
+  <section class="sec"><h2 class="sec-label">The design problem</h2>
+    <p>Designing the investor side meant solving three things.</p>
+    <ul>
+      <li>Accredited investors needed enough information to assess risk and commit capital with confidence, without turning the interface into a regulatory document.</li>
+      <li>The same product had to ship across three markets, Vietnam, Singapore, Thailand, each with its own regulator, currency, language, and investor expectations.</li>
+      <li>Capital sitting idle in an investor's account isn't earning, so the platform had to give investors a way to auto-invest their available balance into new loans matching their criteria, without losing the control investors expect over where their money goes.</li>
+    </ul>
+  </section>
+  <section class="sec"><h2 class="sec-label">Approach</h2>
+    <p>I worked alongside one other designer, splitting ownership across the Investor and Borrower apps. My process started with market research and competitor analysis across regional and international lending platforms, then face-to-face user testing with real investors in each market. Prototypes were validated in Maze before high-fidelity design. The design system was built to support both apps and three markets from the same source, keeping the marketplace consistent on both sides.</p>
+  </section>
+  <div class="rule"></div>
+  <section class="sec"><h2 class="sec-label">Key design decisions</h2>
+    <div class="decision"><div class="d-title"><span class="d-num">01</span>Designing for confidence, not just information</div>
+      <p class="dim">Accredited investors don't need more data. They need enough of the right data, in the right order, to commit capital. The decision was to design every loan listing around three questions investors actually ask: Who is borrowing, what is the risk, and what is the return? The flow stops being a database query and starts being a decision-support tool.</p>
+      <div class="cs-figure"><div class="ph wide"><span class="corner">Decision 01</span><span class="ph-label">Loan listing & funding flow, a decision-support tool</span></div></div>
+    </div>
+    <div class="decision"><div class="d-title"><span class="d-num">02</span>One product, three markets</div>
+      <p class="dim">The same investor app had to work for a fintech-fluent investor in Singapore, a regulated retail investor in Thailand, and a first-time digital investor in Vietnam. The decision was to design the core experience once, then localise the layers that genuinely differ, currency, language, regulator-specific disclosures, KYC requirements, without forking the product. Filters, navigation, and the investment flow stay the same across markets; only the parts that have to change do.</p>
+    </div>
+    <div class="decision"><div class="d-title"><span class="d-num">03</span>Auto-invest as a control system</div>
+      <p class="dim">The auto-invest feature allows investors to set criteria for how their money is invested, loan grade, tenor, sector, anchor, and maximum exposure per loan. The platform then automatically deploys capital according to those rules.</p>
+      <div class="cs-figure"><div class="ph tall"><span class="corner">Decision 03</span><span class="ph-label">Auto-invest, criteria-based capital deployment</span></div></div>
+    </div>
+  </section>
+  <div class="rule"></div>
+  <section class="sec"><h2 class="sec-label">Outcomes</h2>
+    <p>Shipped the Investor web app across three regulated markets (Vietnam, Singapore, Thailand), as part of the platform that has now disbursed over S$5 billion across 120,000+ SME loans.</p>
+    <p>Validated the product post-launch through end-user testing, measuring satisfaction, usability of new features, and onboarding completion for first-time investors.</p>
+  </section>
+  <section class="sec"><h2 class="sec-label">Reflection</h2>
+    <p>The most interesting work wasn't designing either side in isolation. It was designing the moments where they meet: how an investor sees a borrower's risk, how a borrower sees an investor's commitment. If I were continuing on the product, the next focus would be the connective layer between the two sides, making the marketplace feel less like two apps sharing a database, and more like one product that two user types experience differently.</p>
+  </section>
+</main>
+</body>
+</html>
