@@ -242,6 +242,9 @@
         goCase(url);
         return;
       }
+      if(e.target.closest('.cap-r')){
+        return;
+      }
       if(e.target.closest('.slotwrap')||e.target.closest('.d-block')){
         e.preventDefault();
         goCase(url);

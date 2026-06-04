@@ -38,6 +38,7 @@
 .cs-archive-strip::before{content:"";position:absolute;inset:-4px;border:3px solid var(--cream);border-radius:5px;filter:url(#rough);opacity:.55;pointer-events:none;z-index:1;}
 .cs-archive-strip img{display:block;width:100%;height:auto;margin:0;border:0;border-radius:0;vertical-align:top;}
 .cs-archive-modal-close{position:fixed;top:14px;right:18px;z-index:210;width:48px;height:48px;border-radius:50%;background:rgba(236,227,204,.72);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);color:var(--ink);border:none;font-size:30px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 20px rgba(0,0,0,.55);transition:transform .25s;}
+.cs-archive-modal-close::before{content:"";position:absolute;inset:-24px;border-radius:50%;}
 .cs-archive-modal-close:hover{transform:rotate(90deg) scale(1.06);}
 body.cs-archive-open{overflow:hidden;}
 

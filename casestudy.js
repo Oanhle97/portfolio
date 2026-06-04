@@ -107,3 +107,54 @@
     document.fonts.ready.then(run);
   }
 })();
+
+(function () {
+  var mobileMq = window.matchMedia('(max-width:760px)');
+
+  function initArchiveModal(openBtn) {
+    var modalId = openBtn.getAttribute('data-archive-modal');
+    if (!modalId) return;
+    var modal = document.getElementById(modalId);
+    if (!modal) return;
+
+    function openModal() {
+      modal.classList.add('open');
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('cs-archive-open');
+    }
+
+    function closeModal() {
+      modal.classList.remove('open');
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('cs-archive-open');
+    }
+
+    openBtn.addEventListener('click', function (e) {
+      if (!mobileMq.matches) return;
+      e.preventDefault();
+      openModal();
+    });
+
+    modal.querySelectorAll('[data-archive-close]').forEach(function (el) {
+      el.addEventListener('click', closeModal);
+    });
+  }
+
+  function initArchiveModals() {
+    document.querySelectorAll('[data-archive-open]').forEach(initArchiveModal);
+    document.addEventListener('keydown', function (e) {
+      if (e.key !== 'Escape') return;
+      document.querySelectorAll('.cs-archive-modal.open').forEach(function (modal) {
+        modal.classList.remove('open');
+        modal.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('cs-archive-open');
+      });
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initArchiveModals);
+  } else {
+    initArchiveModals();
+  }
+})();

@@ -23,7 +23,7 @@
     </div>
     <p class="cs-sub">Investor-side web app for Validus, Southeast Asia's leading SME lending marketplace — S$5b+ disbursed across 120,000+ loans.</p>
     <div class="cs-meta">Product Designer · 2020 · Web app</div>
-    <a class="cs-meta-link cs-archive-pdf" id="validusArchiveOpen" href="assets/Validus-old-port.pdf" target="_blank" rel="noopener noreferrer">View the initial portfolio version</a>
+    <a class="cs-meta-link cs-archive-pdf" data-archive-open data-archive-modal="validusArchiveModal" href="assets/Validus-old-port.pdf" target="_blank" rel="noopener noreferrer">View the initial portfolio version</a>
   </header>
   <div class="cs-figure"><figure class="cs-figure-img"><img src="assets/validus/1.jpg" alt="Validus investor web app — portfolio, listings and analytics" width="1600" height="1304" loading="eager" decoding="async"></figure></div>
   <div class="rule"></div>
@@ -87,39 +87,5 @@
 </div>
 
 <script src="casestudy.js"></script>
-<script>
-(function(){
-  var openBtn=document.getElementById('validusArchiveOpen');
-  var modal=document.getElementById('validusArchiveModal');
-  if(!openBtn||!modal) return;
-  var mobileMq=window.matchMedia('(max-width:760px)');
-
-  function openModal(){
-    modal.classList.add('open');
-    modal.setAttribute('aria-hidden','false');
-    document.body.classList.add('cs-archive-open');
-  }
-
-  function closeModal(){
-    modal.classList.remove('open');
-    modal.setAttribute('aria-hidden','true');
-    document.body.classList.remove('cs-archive-open');
-  }
-
-  openBtn.addEventListener('click',function(e){
-    if(!mobileMq.matches) return;
-    e.preventDefault();
-    openModal();
-  });
-
-  modal.querySelectorAll('[data-archive-close]').forEach(function(el){
-    el.addEventListener('click',closeModal);
-  });
-
-  document.addEventListener('keydown',function(e){
-    if(e.key==='Escape'&&modal.classList.contains('open')) closeModal();
-  });
-})();
-</script>
 </body>
 </html>
