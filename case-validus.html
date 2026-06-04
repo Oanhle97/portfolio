@@ -6,7 +6,7 @@
 <title>Validus — Oanh Le</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bungee&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,500;0,8..60,600;0,8..60,700;1,8..60,400;1,8..60,500&display=swap" rel="stylesheet">
 <link href="casestudy.css" rel="stylesheet">
 </head>
 <body>
@@ -18,11 +18,14 @@
 <main class="cs">
 
   <header class="cs-hero">
-    <h1 class="cs-title">Validus Investment web app</h1>
+    <div class="cs-title-row">
+      <h1 class="cs-title">Validus Investment web app</h1>
+      <a class="cs-title-link" href="https://siamvalidus.co.th/en/" target="_blank" rel="noopener noreferrer" aria-label="Open Validus website"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/></svg></a>
+    </div>
     <p class="cs-sub">Investor-side web app for Validus, Southeast Asia's leading SME lending marketplace — S$5b+ disbursed across 120,000+ loans.</p>
     <div class="cs-meta">Product Designer · 2020 · Web app</div>
   </header>
-  <div class="cs-figure"><div class="ph wide"><span class="corner">Validus</span><span class="ph-label">Investor web app, portfolio, listings & analytics</span></div></div>
+  <div class="cs-figure"><figure class="cs-figure-img"><img src="assets/validus/1.jpg" alt="Validus investor web app — portfolio, listings and analytics" width="1600" height="1304" loading="eager" decoding="async"></figure></div>
   <div class="rule"></div>
   <section class="sec"><h2 class="sec-label">The business problem</h2>
     <p>Validus runs a two-sided marketplace: SME borrowers on one side, accredited investors funding their loans on the other. The platform's growth depends on both sides scaling together, but the two user types have nothing in common. Borrowers are SME owners managing cash flow; investors are finance professionals managing capital. The Investment web app had to feel like a product built for investors specifically, not a shared interface compromised between two audiences.</p>
@@ -41,15 +44,15 @@
   <div class="rule"></div>
   <section class="sec"><h2 class="sec-label">Key design decisions</h2>
     <div class="decision"><div class="d-title"><span class="d-num">01</span>Designing for confidence, not just information</div>
-      <p class="dim">Accredited investors don't need more data. They need enough of the right data, in the right order, to commit capital. The decision was to design every loan listing around three questions investors actually ask: Who is borrowing, what is the risk, and what is the return? The flow stops being a database query and starts being a decision-support tool.</p>
-      <div class="cs-figure"><div class="ph wide"><span class="corner">Decision 01</span><span class="ph-label">Loan listing & funding flow, a decision-support tool</span></div></div>
+      <p>Accredited investors don't need more data. They need enough of the right data, in the right order, to commit capital. The decision was to design every loan listing around three questions investors actually ask: Who is borrowing, what is the risk, and what is the return? The flow stops being a database query and starts being a decision-support tool.</p>
+      <div class="cs-figure"><figure class="cs-figure-img"><img src="assets/validus/2.jpg" alt="Validus loan listing and funding flow — decision-support tool" width="1600" height="704" loading="lazy" decoding="async"></figure></div>
     </div>
     <div class="decision"><div class="d-title"><span class="d-num">02</span>One product, three markets</div>
-      <p class="dim">The same investor app had to work for a fintech-fluent investor in Singapore, a regulated retail investor in Thailand, and a first-time digital investor in Vietnam. The decision was to design the core experience once, then localise the layers that genuinely differ, currency, language, regulator-specific disclosures, KYC requirements, without forking the product. Filters, navigation, and the investment flow stay the same across markets; only the parts that have to change do.</p>
+      <p>The same investor app had to work for a fintech-fluent investor in Singapore, a regulated retail investor in Thailand, and a first-time digital investor in Vietnam. The decision was to design the core experience once, then localise the layers that genuinely differ, currency, language, regulator-specific disclosures, KYC requirements, without forking the product. Filters, navigation, and the investment flow stay the same across markets; only the parts that have to change do.</p>
     </div>
     <div class="decision"><div class="d-title"><span class="d-num">03</span>Auto-invest as a control system</div>
-      <p class="dim">The auto-invest feature allows investors to set criteria for how their money is invested, loan grade, tenor, sector, anchor, and maximum exposure per loan. The platform then automatically deploys capital according to those rules.</p>
-      <div class="cs-figure"><div class="ph tall"><span class="corner">Decision 03</span><span class="ph-label">Auto-invest, criteria-based capital deployment</span></div></div>
+      <p>The auto-invest feature allows investors to set criteria for how their money is invested, loan grade, tenor, sector, anchor, and maximum exposure per loan. The platform then automatically deploys capital according to those rules.</p>
+      <div class="cs-figure"><figure class="cs-figure-img"><img src="assets/validus/3.jpg" alt="Validus auto-invest — criteria-based capital deployment" width="1600" height="1289" loading="lazy" decoding="async"></figure></div>
     </div>
   </section>
   <div class="rule"></div>
@@ -61,5 +64,6 @@
     <p>The most interesting work wasn't designing either side in isolation. It was designing the moments where they meet: how an investor sees a borrower's risk, how a borrower sees an investor's commitment. If I were continuing on the product, the next focus would be the connective layer between the two sides, making the marketplace feel less like two apps sharing a database, and more like one product that two user types experience differently.</p>
   </section>
 </main>
+<script src="casestudy.js"></script>
 </body>
 </html>

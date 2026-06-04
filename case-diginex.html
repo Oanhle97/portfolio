@@ -6,7 +6,7 @@
 <title>DiginexESG — Oanh Le</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bungee&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,500;0,8..60,600;0,8..60,700;1,8..60,400;1,8..60,500&display=swap" rel="stylesheet">
 <link href="casestudy.css" rel="stylesheet">
 </head>
 <body>
@@ -18,11 +18,14 @@
 <main class="cs">
 
   <header class="cs-hero">
-    <h1 class="cs-title">DiginexESG framework</h1>
+    <div class="cs-title-row">
+      <h1 class="cs-title">DiginexESG framework</h1>
+      <a class="cs-title-link" href="https://www.diginex.com/sustainability-reporting" target="_blank" rel="noopener noreferrer" aria-label="Open Diginex sustainability reporting"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/></svg></a>
+    </div>
     <p class="cs-sub">ESG and sustainability reporting platform for enterprise teams, built for Diginex.</p>
     <div class="cs-meta">Product Designer · 2021–2022 · Web platform</div>
   </header>
-  <div class="cs-figure"><div class="ph wide"><span class="corner">DiginexESG</span><span class="ph-label">Sustainability report builder</span></div></div>
+  <div class="cs-figure"><figure class="cs-figure-img"><img src="assets/diginex/1.jpg" alt="DiginexESG sustainability report builder" width="1600" height="844" loading="eager" decoding="async"></figure></div>
   <div class="rule"></div>
   <section class="sec"><h2 class="sec-label">The business problem</h2>
     <p>Diginex had proven the market with a first-generation ESG reporting product, but the reality of how enterprise sustainability reporting actually works had outgrown the platform. A single ESG report isn't filled in by one person, it's assembled by dozens of contributors across multiple business units, reviewed by managers, signed off by leadership, and audited externally.</p>
@@ -40,12 +43,12 @@
   <div class="rule"></div>
   <section class="sec"><h2 class="sec-label">Key design decisions</h2>
     <div class="decision"><div class="d-title"><span class="d-num">01</span>Modelling the company before modelling the report</div>
-      <p class="dim">A multinational doesn't report as a single entity, it reports as a parent organisation with subsidiaries, each with its own emissions, users, and disclosures. The decision was to make Entity Management a first-class surface, not a settings page. Users build their corporate structure as a navigable hierarchy.</p>
-      <div class="cs-figure"><div class="ph tall"><span class="corner">Decision 01</span><span class="ph-label">Entity Management, corporate structure as a hierarchy</span></div></div>
+      <p>A multinational doesn't report as a single entity, it reports as a parent organisation with subsidiaries, each with its own emissions, users, and disclosures. The decision was to make Entity Management a first-class surface, not a settings page. Users build their corporate structure as a navigable hierarchy.</p>
+      <div class="cs-figure"><figure class="cs-figure-img"><img src="assets/diginex/2.jpg" alt="DiginexESG Entity Management — corporate structure as a hierarchy" width="1600" height="1172" loading="lazy" decoding="async"></figure></div>
     </div>
     <div class="decision"><div class="d-title"><span class="d-num">02</span>Collaboration as a workflow</div>
-      <p class="dim">ESG reports aren't filled in by one person. Dozens of contributors own different KPIs, managers review, leadership signs off. The first version treated all of this as "share access." The decision was to design collaboration as a structured workflow, KPIs assigned to specific people, progress tracked per contributor, data and evidence requests routed to the right owner. The Report Collaborators view stopped being a permissions screen and became the operating layer of the platform: who is doing what, where they are, and what's still waiting.</p>
-      <div class="cs-figure"><div class="ph tall"><span class="corner">Decision 02</span><span class="ph-label">Report Collaborators, KPIs, comments & evidence requests</span></div></div>
+      <p>ESG reports aren't filled in by one person. Dozens of contributors own different KPIs, managers review, leadership signs off. The first version treated all of this as "share access." The decision was to design collaboration as a structured workflow, KPIs assigned to specific people, progress tracked per contributor, data and evidence requests routed to the right owner. The Report Collaborators view stopped being a permissions screen and became the operating layer of the platform: who is doing what, where they are, and what's still waiting.</p>
+      <div class="cs-figure"><figure class="cs-figure-img"><img src="assets/diginex/3.jpg" alt="DiginexESG Report Collaborators — KPIs, comments and evidence requests" width="1600" height="1072" loading="lazy" decoding="async"></figure></div>
     </div>
   </section>
   <div class="rule"></div>
@@ -54,5 +57,6 @@
     <p>Shipped the revamp as a second-generation designer working with one product manager, validated against real ESG users at each stage of delivery.</p>
   </section>
 </main>
+<script src="casestudy.js"></script>
 </body>
 </html>

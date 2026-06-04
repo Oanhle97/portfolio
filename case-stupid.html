@@ -6,7 +6,7 @@
 <title>Stupid experiences — Oanh Le</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bungee&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,500;0,8..60,600;0,8..60,700;1,8..60,400;1,8..60,500&display=swap" rel="stylesheet">
 <link href="casestudy.css" rel="stylesheet">
 </head>
 <body>
@@ -19,7 +19,7 @@
 
   <header class="cs-hero">
     <h1 class="cs-title">"Stupid" experiences from the products I use in Finland</h1>
-    <p class="cs-sub">A running notebook of UX problems in the consumer apps I use in Finland — what breaks, why, and what I'd change.</p>
+    <p class="cs-sub">A running notebook of UX problems in the consumer apps I use in Finland.</p>
     <div class="cs-meta">Personal project · ongoing audit series · sole author · 2025–present</div>
   </header>
   <div class="rule"></div>
@@ -33,21 +33,17 @@
       <li>Where did the product fight me?</li>
       <li>What's the smallest change that would help?</li>
     </ul>
-    <p class="dim">The friction is usually visible to anyone using the app, not just designers. Every proposed fix is something that could plausibly ship.</p>
+    <p>The friction is usually visible to anyone using the app, not just designers. Every proposed fix is something that could plausibly ship.</p>
   </section>
   <div class="rule"></div>
   <section class="sec"><h2 class="sec-label">S-mobiili application</h2>
     <div class="decision"><div class="d-title">What was I trying to do</div>
-      <p class="dim">I'm a newcomer to Finland, and S-mobiili was my first Finnish bank account. The app was only available in Finnish. I often forgot my PIN code when depositing. The first time it happened, I screenshotted the interface and translated it with another app. After that, I'd try to find the "check PIN code" page by tapping around, hoping I'd land on it from visual memory. Sometimes I tapped into other features by mistake, and all of those taps cost me money.</p>
+      <p>I'm a newcomer to Finland, and S-mobiili was my first Finnish bank account. The app was only available in Finnish. I often forgot my PIN code when depositing. The first time it happened, I screenshotted the interface and translated it with another app. After that, I'd try to find the "check PIN code" page by tapping around, hoping I'd land on it from visual memory. Sometimes I tapped into other features by mistake, and all of those taps cost me money.</p>
     </div>
     <div class="decision"><div class="d-title">Where did the product fight me</div>
-      <p class="dim">There was no English language option at the time. A user who can't read Finnish has only one strategy left: tap every icon and menu until something looks right. The interfaces for "Check PIN code," "Order card's PIN code by mail," and "Card with a PIN code of your choice" all sit in the same group and look almost identical (see below). All three charge a fee, and I had to tap through every one of them to find the one I actually wanted.</p>
+      <p>There was no English language option at the time. A user who can't read Finnish has only one strategy left: tap every icon and menu until something looks right. The interfaces for "Check PIN code," "Order card's PIN code by mail," and "Card with a PIN code of your choice" all sit in the same group and look almost identical (see below). All three charge a fee, and I had to tap through every one of them to find the one I actually wanted.</p>
     </div>
-    <div class="shots">
-      <div class="shot"><div class="ph"><span class="ph-label">S-mobiili screen</span></div><div class="cs-cap">Check PIN code</div></div>
-      <div class="shot"><div class="ph"><span class="ph-label">S-mobiili screen</span></div><div class="cs-cap">Order card's PIN code by mail</div></div>
-      <div class="shot"><div class="ph"><span class="ph-label">S-mobiili screen</span></div><div class="cs-cap">Card with a PIN code of your choice</div></div>
-    </div>
+    <div class="cs-figure"><figure class="cs-figure-img"><img src="assets/stupid/1.jpg" alt="S-mobiili — Check PIN code, order PIN by mail, and custom PIN flows (visually similar)" width="740" height="549" loading="lazy" decoding="async"></figure></div>
     <div class="decision"><div class="d-title">Why it breaks</div>
       <ul>
         <li>The app is designed for Finnish-speaking customers as the default, not as a setting that can be changed. That's a localisation decision, not a usability one, but it shapes every other interaction.</li>
@@ -62,16 +58,17 @@
     </div>
   </section>
   <div class="rule"></div>
-  <section class="sec"><h2 class="sec-label">K-ruoka application</h2><p class="wip">Coming soon…</p></section>
+  <section class="sec"><h2 class="sec-label">K-ruoka application</h2><p>Coming soon…</p></section>
   <div class="rule"></div>
-  <section class="sec"><h2 class="sec-label">One4all application</h2><p class="wip">Coming soon…</p></section>
+  <section class="sec"><h2 class="sec-label">One4all application</h2><p>Coming soon…</p></section>
   <div class="rule"></div>
-  <section class="sec"><h2 class="sec-label">What this project is teaching me</h2><p class="wip">Coming soon…</p></section>
+  <section class="sec"><h2 class="sec-label">What this project is teaching me</h2><p>Coming soon…</p></section>
   <div class="rule"></div>
   <section class="sec"><h2 class="sec-label">Reflection</h2>
-    <p>I keep this project running because the apps keep updating. Every release is a chance to see whether a friction point gets fixed, ignored, or replaced with a new one, or whether it points to a structural reason rather than a bug.</p>
+    <p>I keep this project running because the apps keep updating. Every release is a chance to see whether a friction point gets fixed, ignored, replaced, or quietly kept because it works for the company even if it doesn't work for the user.</p>
   </section>
-  <section class="sec"><h2 class="sec-label">Update log</h2><p class="dim">04.06.2026</p></section>
+  <section class="sec"><h2 class="sec-label">Update log</h2><p>04.06.2026</p></section>
 </main>
+<script src="casestudy.js"></script>
 </body>
 </html>
