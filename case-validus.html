@@ -32,7 +32,9 @@
   <div class="cs-figure"><figure class="cs-figure-img"><img src="assets/validus/1.jpg" alt="Validus investor web app — portfolio, listings and analytics" width="1600" height="1304" loading="eager" decoding="async"></figure></div>
   <div class="rule"></div>
   <section class="sec"><h2 class="sec-label">The business problem</h2>
-    <p>Validus runs a two-sided marketplace: SME borrowers on one side, accredited investors funding their loans on the other. The platform's growth depends on both sides scaling together, but the two user types have nothing in common. Borrowers are SME owners managing cash flow; investors are finance professionals managing capital. The Investment web app had to feel like a product built for investors specifically, not a shared interface compromised between two audiences.</p>
+    <p>Validus runs a two-sided marketplace: SME borrowers seeking financing on one side, accredited investors deploying capital on the other. The platform's growth depends on both sides working well together, but each side has a completely different job to do.</p>
+    <p>The Investor app is built around portfolio management, letting accredited investors browse live SME facilities, evaluate each opportunity against their risk preferences, automate fund allocation through Auto-Invest, and track returns.</p>
+    <p>The Borrower app is built around presentation and management, letting SMEs apply for facilities, demonstrate their creditworthiness, and manage their financing relationships.</p>
   </section>
   <section class="sec"><h2 class="sec-label">The design problem</h2>
     <p>Designing the investor side meant solving three things.</p>
@@ -48,11 +50,11 @@
   <div class="rule"></div>
   <section class="sec"><h2 class="sec-label">Key design decisions</h2>
     <div class="decision"><div class="d-title"><span class="d-num">01</span>Designing for confidence, not just information</div>
-      <p>Accredited investors don't need more data. They need enough of the right data, in the right order, to commit capital. The decision was to design every loan listing around three questions investors actually ask: Who is borrowing, what is the risk, and what is the return? The flow stops being a database query and starts being a decision-support tool.</p>
+      <p>Accredited investors don't need more data. They need enough of the right data, in the right order, to commit capital. The decision was to design every loan listing around 3 questions investors actually ask: Who is borrowing, what is the risk, and what is the return? The flow stops being a database query and starts being a decision-support tool.</p>
       <div class="cs-figure"><figure class="cs-figure-img"><img src="assets/validus/2.jpg" alt="Validus loan listing and funding flow — decision-support tool" width="1600" height="704" loading="lazy" decoding="async"></figure></div>
     </div>
     <div class="decision"><div class="d-title"><span class="d-num">02</span>One product, three markets</div>
-      <p>The same investor app had to work for a fintech-fluent investor in Singapore, a regulated retail investor in Thailand, and a first-time digital investor in Vietnam. The decision was to design the core experience once, then localise the layers that genuinely differ, currency, language, regulator-specific disclosures, KYC requirements, without forking the product. Filters, navigation, and the investment flow stay the same across markets; only the parts that have to change do.</p>
+      <p>The app launched in Singapore, then expanded to Thailand and Vietnam. The core experience stayed identical across markets. Only the layers that genuinely differ were localised: language, currency, regulator-specific disclosures, and KYC requirements.</p>
     </div>
     <div class="decision"><div class="d-title"><span class="d-num">03</span>Auto-invest as a control system</div>
       <p>The auto-invest feature allows investors to set criteria for how their money is invested, loan grade, tenor, sector, anchor, and maximum exposure per loan. The platform then automatically deploys capital according to those rules.</p>

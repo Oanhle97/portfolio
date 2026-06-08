@@ -19,6 +19,7 @@
 <link rel="preload" as="image" href="assets/intro/stupid.jpg">
 <link href="base.css" rel="stylesheet">
 <link href="home.css" rel="stylesheet">
+<script>try{if(sessionStorage.getItem('portfolio-home-state'))document.documentElement.classList.add('home-restoring','home-no-transitions');}catch(e){}</script>
 </head>
 <body>
 <svg class="defs" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
@@ -73,7 +74,7 @@
               <div class="slotwrap"><img src="./assets/intro/twentyfold.jpg" alt="Twentyfold fintech intelligence platform" width="1400" height="719" loading="eager" decoding="async" fetchpriority="high"></div>
               <div class="d-text">
                 <div class="d-block"><div class="d-lab">What it is</div><p>Investment intelligence platform built for Money20/20 (Ascential).</p></div>
-                <div class="d-block"><div class="d-lab">Role + team</div><p>Sole Product Designer, partnered with the Product Owner and Engineering.</p></div>
+                <div class="d-block"><div class="d-lab">Role + team</div><p>Sole designer · 1 product owner · 6 engineers</p></div>
                 <div class="d-tags"><span>Fintech intelligence</span><span>B2B SaaS</span></div>
               </div>
             </div>
@@ -101,7 +102,7 @@
               <div class="slotwrap"><img src="./assets/intro/esg.jpg" alt="DiginexESG sustainability reporting platform" width="1400" height="719" loading="eager" decoding="async"></div>
               <div class="d-text">
                 <div class="d-block"><div class="d-lab">What it is</div><p>Powered ESG reporting platform for enterprise sustainability teams.</p></div>
-                <div class="d-block"><div class="d-lab">Role + team</div><p>Product Designer, partnered with Product Manager and Engineering.</p></div>
+                <div class="d-block"><div class="d-lab">Role + team</div><p>1 of 3 designers · 3 product manager · 10 engineers</p></div>
                 <div class="d-tags"><span>Sustainability tech</span><span>Enterprise SaaS</span></div>
               </div>
             </div>
@@ -128,8 +129,8 @@
             <div class="detail-in">
               <div class="slotwrap"><img src="./assets/intro/validus.jpg" alt="Validus investment web app" width="1400" height="719" loading="eager" decoding="async"></div>
               <div class="d-text">
-                <div class="d-block"><div class="d-lab">What it is</div><p>SME lending marketplace connecting investors and borrowers across Southeast Asia.</p></div>
-                <div class="d-block"><div class="d-lab">Role + team</div><p>1 of 3 Designers, partnered with Product Owner and Engineering.</p></div>
+                <div class="d-block"><div class="d-lab">What it is</div><p>SME lending marketplace connecting accredited investors and SMEs across Southeast Asia.</p></div>
+                <div class="d-block"><div class="d-lab">Role + team</div><p>1 of 2 designers · 1 product owner · 10 engineers</p></div>
                 <div class="d-tags"><span>Investment</span><span>Two-sided marketplace</span><span>Multi-market</span></div>
               </div>
             </div>
@@ -185,92 +186,7 @@
 </footer>
 </div>
 
-<script>
-(function(){
-  function goCase(url){
-    window.location.href=url;
-  }
-
-  function expandTape(tape){
-    if(mobileMq.matches){
-      syncMobileTapes();
-      return;
-    }
-    if(tape) tape.classList.add('is-open');
-    syncExpandAllBtn();
-  }
-
-  var expandAllBtn=document.getElementById('expandAll');
-
-  function syncExpandAllBtn(){
-    if(!expandAllBtn||mobileMq.matches) return;
-    var tapes=document.querySelectorAll('#stack .tape');
-    var allOpen=tapes.length&&Array.prototype.every.call(tapes,function(t){return t.classList.contains('is-open');});
-    var txt=expandAllBtn.querySelector('.expand-all-txt');
-    if(txt) txt.textContent=allOpen?'Collapse all':'Expand all';
-    expandAllBtn.classList.toggle('is-all-open',allOpen);
-  }
-
-  var mobileMq=window.matchMedia('(max-width:820px)');
-  function syncMobileTapes(){
-    document.querySelectorAll('#stack .tape').forEach(function(t){
-      if(mobileMq.matches) t.classList.add('is-open');
-      else t.classList.remove('is-open');
-    });
-    syncExpandAllBtn();
-  }
-  syncMobileTapes();
-  mobileMq.addEventListener('change',syncMobileTapes);
-
-  if(expandAllBtn){
-    expandAllBtn.addEventListener('click',function(){
-      if(mobileMq.matches) return;
-      var tapes=document.querySelectorAll('#stack .tape');
-      var allOpen=Array.prototype.every.call(tapes,function(t){return t.classList.contains('is-open');});
-      tapes.forEach(function(t){t.classList.toggle('is-open',!allOpen);});
-      syncExpandAllBtn();
-    });
-    syncExpandAllBtn();
-  }
-
-  document.querySelectorAll('#stack .tape').forEach(function(tape){
-    var url=tape.getAttribute('data-case');
-    if(!url) return;
-    tape.addEventListener('click',function(e){
-      if(e.target.closest('a[href]')) return;
-      if(mobileMq.matches){
-        e.preventDefault();
-        goCase(url);
-        return;
-      }
-      if(e.target.closest('.cap-r')){
-        return;
-      }
-      if(e.target.closest('.slotwrap')||e.target.closest('.d-block')){
-        e.preventDefault();
-        goCase(url);
-        return;
-      }
-      if(e.target.closest('.spine')){
-        e.preventDefault();
-        tape.classList.toggle('is-open');
-        syncExpandAllBtn();
-      }
-    });
-  });
-  document.querySelectorAll('.jump-stupid').forEach(function(a){
-    a.addEventListener('click',function(e){
-      e.preventDefault();
-      var tape=document.getElementById('work-stupid');
-      if(!tape) return;
-      expandTape(tape);
-      requestAnimationFrame(function(){
-        tape.scrollIntoView({behavior:'smooth',block:'start'});
-      });
-    });
-  });
-})();
-</script>
+<script src="home.js"></script>
 <script src="contact.js"></script>
 
 </body>

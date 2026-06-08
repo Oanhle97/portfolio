@@ -95,6 +95,9 @@ body.cs-archive-open{overflow:hidden;}
 .ab-grid p{font-size:18px;color:var(--cream);margin-bottom:8px;}
 .ab-grid ul{list-style:none;margin-top:4px;}
 .ab-grid li{position:relative;padding-left:22px;font-size:19px;margin-bottom:8px;}
+.ab-grid.ab-skills p,
+.ab-grid.ab-skills li,
+.ab-grid.ab-skills .ab-sub{font-size:18px;}
 .ab-grid li::before{content:"";position:absolute;left:2px;top:12px;width:8px;height:3px;background:var(--cream);filter:url(#rough2);}
 .ab-grid .grp,.ab-duo-col .grp{display:flex;flex-direction:column;gap:12px;}
 .grp-body{display:flex;flex-direction:column;gap:0;}
@@ -141,6 +144,9 @@ button.ab-contact-item{background:none;border:none;padding:0;font:inherit;letter
   .ab-skills{display:flex;flex-direction:column;gap:0;}
   .ab-skills>.grp{grid-column:unset;grid-row:unset;margin-bottom:24px;}
   .ab-skills>.grp:last-child{margin-bottom:0;}
+  .ab-grid.ab-skills p,
+  .ab-grid.ab-skills li,
+  .ab-grid.ab-skills .ab-sub{font-size:16px;}
   .ab-duo{grid-template-columns:1fr;gap:32px;}
   .ab-contact{flex-direction:column;align-items:flex-start;gap:10px;font-size:16px;}
 }

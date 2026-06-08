@@ -1,4 +1,6 @@
 /* Home page (index.html) */
+html.home-restoring body{visibility:hidden;}
+html.home-no-transitions,html.home-no-transitions *{transition:none!important;}
 .thesis,.d-block p,.about-body p,.talbum{font-style:normal;font-weight:400;}
 
 .page{position:relative;z-index:1;}
