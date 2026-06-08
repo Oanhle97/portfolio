@@ -58,10 +58,7 @@
   }
 
   function expandTape(tape) {
-    if (mobileMq.matches) {
-      syncMobileTapes();
-      return;
-    }
+    if (mobileMq.matches) return;
     if (tape) tape.classList.add('is-open');
     syncExpandAllBtn();
   }
@@ -81,9 +78,96 @@
     expandAllBtn.classList.toggle('is-all-open', allOpen);
   }
 
+  function expandAllTapes() {
+    if (mobileMq.matches) return;
+    document.querySelectorAll('#stack .tape').forEach(function (t) {
+      t.classList.add('is-open');
+    });
+    syncExpandAllBtn();
+  }
+
   var mobileMq = window.matchMedia('(max-width:820px)');
 
+  var panelWork = document.getElementById('panel-work');
+  var panelAbout = document.getElementById('panel-about');
+  var PAGE_TITLE = 'Oanh Le, Product Designer';
+  var ABOUT_TITLE = 'About — Oanh Le';
+  var workScrollY = 0;
+
+  function scrollInstant(y) {
+    window.scrollTo({ left: 0, top: y, behavior: 'instant' });
+  }
+
+  function showPanel(panel, activeTab) {
+    var isAbout = panel === 'about';
+    var wasAbout = panelAbout && !panelAbout.hidden;
+
+    if (isAbout && panelWork && !panelWork.hidden) {
+      workScrollY = window.scrollY;
+    }
+
+    if (panelWork) panelWork.hidden = isAbout;
+    if (panelAbout) panelAbout.hidden = !isAbout;
+    document.querySelectorAll('.nav-tab').forEach(function (link) {
+      link.classList.toggle('is-active', !!activeTab && link.getAttribute('data-panel') === activeTab);
+    });
+    document.title = isAbout ? ABOUT_TITLE : PAGE_TITLE;
+
+    if (isAbout) {
+      scrollInstant(0);
+    } else if (wasAbout) {
+      scrollInstant(workScrollY);
+    }
+  }
+
+  function stateFromHash() {
+    var hash = location.hash;
+    if (hash === '#about') return { panel: 'about', active: 'about' };
+    if (hash === '#work') return { panel: 'work', active: 'work' };
+    return { panel: 'work', active: null };
+  }
+
+  function applyPanelFromHash() {
+    var state = stateFromHash();
+    showPanel(state.panel, state.active);
+    if (state.active === 'work') expandAllTapes();
+    var hash = location.hash;
+    if (hash && hash !== '#about' && hash !== '#top' && hash !== '#work') {
+      var target = document.querySelector(hash);
+      if (target) target.scrollIntoView();
+    }
+  }
+
+  document.querySelectorAll('.nav-tab').forEach(function (link) {
+    link.addEventListener('click', function (e) {
+      var panel = link.getAttribute('data-panel');
+      if (!panel) return;
+      e.preventDefault();
+      var hash = panel === 'about' ? '#about' : '#work';
+      if (location.hash !== hash) history.pushState(null, '', hash);
+      showPanel(panel, panel);
+      if (panel === 'work') {
+        expandAllTapes();
+        var work = document.getElementById('work');
+        if (work) work.scrollIntoView();
+      }
+    });
+  });
+
+  var brand = document.querySelector('.brand');
+  if (brand) {
+    brand.addEventListener('click', function (e) {
+      e.preventDefault();
+      if (location.hash) history.pushState(null, '', '#top');
+      showPanel('work', null);
+      scrollInstant(0);
+    });
+  }
+
+  window.addEventListener('hashchange', applyPanelFromHash);
+
   restoreHomeState();
+  applyPanelFromHash();
 
   if (expandAllBtn) {
     expandAllBtn.addEventListener('click', function () {
@@ -137,7 +221,9 @@
       e.preventDefault();
       var tape = document.getElementById('work-stupid');
       if (!tape) return;
+      if (panelAbout && !panelAbout.hidden) showPanel('work', null);
       expandTape(tape);
+      if (location.hash !== '#work-stupid') history.pushState(null, '', '#work-stupid');
       requestAnimationFrame(function () {
         tape.scrollIntoView({ behavior: 'smooth', block: 'start' });
       });
