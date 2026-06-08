@@ -21,6 +21,10 @@
 <link href="home.css" rel="stylesheet">
 </head>
 <body>
+<svg class="defs" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+  <filter id="rough"><feTurbulence type="fractalNoise" baseFrequency="0.013 0.02" numOctaves="2" seed="4" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="4.5" xChannelSelector="R" yChannelSelector="G"/></filter>
+  <filter id="rough2"><feTurbulence type="fractalNoise" baseFrequency="0.02 0.035" numOctaves="2" seed="11" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="3" xChannelSelector="R" yChannelSelector="G"/></filter>
+</svg>
 <div class="page">
 <header class="bar">
   <div class="wrap bar-inner">
@@ -55,7 +59,7 @@
           <div class="spine">
             <div class="cap-l"><svg class="ddlogo" viewBox="0 0 34 14" aria-hidden="true" fill="none"><path d="M2 1h7a6 6 0 0 1 0 12H2zM6 4v6" stroke="currentColor" stroke-width="1.6"/><path d="M32 1h-7a6 6 0 0 0 0 12h7zM28 4v6" stroke="currentColor" stroke-width="1.6"/></svg></div>
             <div class="label">
-              <div class="tname">Fintech Data Platform</div>
+              <div class="tname">Fintech Data<span class="tname-platform"> Platform</span></div>
               <div class="talbum"><span class="talbum-org">Ascential · </span>UK · Paid Project</div>
             </div>
             <div class="cap-r">
@@ -83,7 +87,7 @@
           <div class="spine">
             <div class="cap-l"><svg class="ddlogo" viewBox="0 0 34 14" aria-hidden="true" fill="none"><path d="M2 1h7a6 6 0 0 1 0 12H2zM6 4v6" stroke="currentColor" stroke-width="1.6"/><path d="M32 1h-7a6 6 0 0 0 0 12h7zM28 4v6" stroke="currentColor" stroke-width="1.6"/></svg></div>
             <div class="label">
-              <div class="tname">ESG Reporting Platform</div>
+              <div class="tname">ESG Reporting<span class="tname-platform"> Platform</span></div>
               <div class="talbum"><span class="talbum-org">Diginex · </span>UK · Paid Project</div>
             </div>
             <div class="cap-r">
@@ -111,7 +115,7 @@
           <div class="spine">
             <div class="cap-l"><svg class="ddlogo" viewBox="0 0 34 14" aria-hidden="true" fill="none"><path d="M2 1h7a6 6 0 0 1 0 12H2zM6 4v6" stroke="currentColor" stroke-width="1.6"/><path d="M32 1h-7a6 6 0 0 0 0 12h7zM28 4v6" stroke="currentColor" stroke-width="1.6"/></svg></div>
             <div class="label">
-              <div class="tname">P2P Lending Platform</div>
+              <div class="tname">P2P Lending<span class="tname-platform"> Platform</span></div>
               <div class="talbum"><span class="talbum-org">Validus · </span>Vietnam · Paid Project</div>
             </div>
             <div class="cap-r">
@@ -139,7 +143,7 @@
           <div class="spine">
             <div class="cap-l"><svg class="ddlogo" viewBox="0 0 34 14" aria-hidden="true" fill="none"><path d="M2 1h7a6 6 0 0 1 0 12H2zM6 4v6" stroke="currentColor" stroke-width="1.6"/><path d="M32 1h-7a6 6 0 0 0 0 12h7zM28 4v6" stroke="currentColor" stroke-width="1.6"/></svg></div>
             <div class="label">
-              <div class="tname"><span class="tname-long">"Stupid" experience diaries in Finnish products</span><span class="tname-short">"Stupid" experience diaries</span></div>
+              <div class="tname"><span class="tname-long"><span class="tname-stupid">"Stupid"</span><span class="tname-rest"> experience diaries in Finnish products</span></span><span class="tname-short"><span class="tname-stupid">"Stupid"</span><span class="tname-rest"> experience diaries</span></span></div>
               <div class="talbum">Finland · Personal Project</div>
             </div>
             <div class="cap-r">
@@ -172,12 +176,9 @@
   <div class="wrap">
     <div class="rule"></div>
     <div class="contact">
-      <a class="ci" href="mailto:lengocoanh1911@gmail.com">lengocoanh1911@gmail.com</a>
-      <span class="contact-sep" aria-hidden="true">·</span>
-      <a class="ci" href="tel:+3584578338834">+358 457 833 8834</a>
-      <span class="contact-sep" aria-hidden="true">·</span>
+      <button type="button" class="ci" data-copy="lengocoanh1911@gmail.com">lengocoanh1911@gmail.com</button>
+      <button type="button" class="ci" data-copy="+3584578338834">+358 457 833 8834</button>
       <a class="ci link" href="https://www.behance.net/lengocoanh" target="_blank" rel="noopener noreferrer">Behance<svg class="ext-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/></svg></a>
-      <span class="contact-sep" aria-hidden="true">·</span>
       <a class="ci link" href="https://www.linkedin.com/in/oanh-le-391289180" target="_blank" rel="noopener noreferrer">LinkedIn<svg class="ext-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/></svg></a>
     </div>
   </div>
@@ -270,6 +271,7 @@
   });
 })();
 </script>
+<script src="contact.js"></script>
 
 </body>
 </html>

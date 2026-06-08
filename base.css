@@ -20,6 +20,7 @@
   --tape-title-size:20px;
   --body-font:'Source Serif 4',serif;
   --accent:#D24228;
+  --stupid-yellow:#E8C547;
 }
 
 *{margin:0;padding:0;box-sizing:border-box;}
@@ -39,3 +40,7 @@ svg.defs{position:absolute;width:0;height:0;}
 
 .rule{height:3px;background:var(--cream);filter:url(#rough);opacity:.85;}
 .rule.tight{margin:34px 0;}
+
+[data-copy]{position:relative;}
+.copy-tip{position:absolute;bottom:calc(100% + 10px);left:50%;transform:translateX(-50%) translateY(4px);padding:6px 10px;font-family:var(--body-font);font-size:13px;font-weight:500;line-height:1;color:var(--ink);background:var(--cream);border-radius:4px;white-space:nowrap;pointer-events:none;opacity:0;visibility:hidden;transition:opacity .2s, transform .2s, visibility .2s;z-index:20;box-shadow:0 4px 14px rgba(0,0,0,.35);}
+.copy-tip.show{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0);}
