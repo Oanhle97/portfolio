@@ -6,7 +6,7 @@
 <title>Oanh Le, Product Designer</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&family=Bungee&family=Cinzel:wght@600;700;800;900&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;0,8..60,700;1,8..60,400;1,8..60,500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&family=Bungee&family=Cinzel:wght@600;700;800;900&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,500;0,8..60,600;0,8..60,700;1,8..60,400;1,8..60,500&display=swap" rel="stylesheet">
 <link rel="prefetch" href="base.css" as="style">
 <link rel="prefetch" href="casestudy.css" as="style">
 <link rel="prefetch" href="case-twentyfold.html">
@@ -29,247 +29,282 @@
 </svg>
 <div class="page">
 <header class="bar">
-  <div class="wrap bar-inner">
+  <div class="bar-inner">
     <a class="brand" href="#top"><span class="rl">Oanh Le</span></a>
-    <nav class="menu">
+    <nav class="menu menu-mobile" aria-label="Site">
       <a href="#work" class="nav-tab" data-panel="work">Work</a>
       <a href="#about" class="nav-tab" data-panel="about">About</a>
     </nav>
   </div>
 </header>
 
-<main id="top">
-  <div id="panel-work" class="home-panel">
-  <!-- HERO -->
-  <section class="hero">
-    <div class="wrap">
-      <p class="thesis">I started designing because I couldn't stop noticing <a href="#work-stupid" class="jump-stupid" aria-label="Jump to Stupid experiences project">"stupid"</a> experiences in the products I used every day.<span class="thesis-tail">I'm still designing for the same reason.</span></p>
+<main id="top" class="home-shell">
+  <nav class="home-desktop-tabs" aria-label="Sections">
+    <div class="desk-tab-wrap desk-tab-about-wrap">
+      <a href="#about" class="desk-tab" data-desk-tab="about">About</a>
+      <button type="button" class="desk-close" data-desk-close="about" aria-label="Close About" hidden>
+        <svg class="desk-close-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12"/><path d="M18 6 6 18"/></svg>
+      </button>
     </div>
-  </section>
-
-  <!-- WORK -->
-  <section id="work">
-    <div class="wrap">
-      <div class="section-head">
-        <h2>Selected Work</h2>
-        <button type="button" class="expand-all" id="expandAll"><span class="expand-all-txt">Expand all</span><svg class="arr" viewBox="0 0 22 22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11c2.5-.2 5-.35 9-.5"/><path d="M10 5.5c2 1.6 3.5 3.4 5.5 5.5"/><path d="M10 16c2-1.6 3.5-3.2 5.5-5.5"/></svg></button>
+    <div class="desk-tab-wrap desk-tab-side-wrap">
+      <a href="#side" class="desk-tab" data-desk-tab="side">Side Projects</a>
+      <button type="button" class="desk-close" data-desk-close="side" aria-label="Close Side Projects" hidden>
+        <svg class="desk-close-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12"/><path d="M18 6 6 18"/></svg>
+      </button>
+    </div>
+    <div class="desk-tab-work-group">
+      <button type="button" class="desk-work-title" id="deskWorkTitle" aria-expanded="false" aria-label="Selected Work, expand or collapse all cards">
+        <span class="desk-work-title-txt">Selected Work</span>
+        <svg class="desk-work-arr" viewBox="0 0 22 22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11c2.5-.2 5-.35 9-.5"/><path d="M10 5.5c2 1.6 3.5 3.4 5.5 5.5"/><path d="M10 16c2-1.6 3.5-3.2 5.5-5.5"/></svg>
+      </button>
+    </div>
+  </nav>
+  <aside class="home-left" aria-label="Introduction">
+    <div class="home-left-scroll is-intro" id="leftScroll">
+      <div class="scroll-inner scroll-inner-left">
+      <div id="panel-left-intro" class="left-panel">
+        <p class="thesis">I started designing because I couldn't stop noticing <a href="#work-stupid" class="jump-stupid" aria-label="Jump to Side Projects on the right">"stupid"</a> experiences in the products I used every day.<span class="thesis-tail">I'm still designing for the same reason.</span></p>
       </div>
-      <div class="stack" id="stack">
 
-        <!-- 01 -->
-        <article class="tape tape-twentyfold" data-case="case-twentyfold.html">
-          <div class="tdust"></div>
-          <div class="spine">
-            <div class="cap-l"><svg class="ddlogo" viewBox="0 0 34 14" aria-hidden="true" fill="none"><path d="M2 1h7a6 6 0 0 1 0 12H2zM6 4v6" stroke="currentColor" stroke-width="1.6"/><path d="M32 1h-7a6 6 0 0 0 0 12h7zM28 4v6" stroke="currentColor" stroke-width="1.6"/></svg></div>
-            <div class="label">
-              <div class="tname"><span class="tname-long">Twentyfold - Fintech Data Platform</span><span class="tname-short">Twentyfold</span></div>
-              <div class="talbum"><span class="talbum-org">Ascential · </span>UK · Paid Project</div>
+      <div id="panel-left-about" class="left-panel about-panel" hidden>
+        <header class="cs-hero">
+          <h1 class="cs-title about-name">Oanh Le</h1>
+          <p class="cs-sub">Product Designer in fintech, sustainability tech, and enterprise B2B SaaS.</p>
+        </header>
+        <div class="rule"></div>
+        <div class="ab-block">
+          <div class="ab-eyebrow">Experience</div>
+          <div class="ab-row">
+            <div class="ab-left">
+              <div class="role">Product Designer</div>
+              <div class="org"><a class="ab-org-link" href="https://www.hodfords.com/home/main/en/" target="_blank" rel="noopener noreferrer">Hodfords<svg class="ext-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/></svg></a></div>
+              <div class="meta">Jun 2021 – Aug 2023</div>
+              <div class="meta">Remote · Vietnam</div>
             </div>
-            <div class="cap-r">
-              <a class="viewmore" href="case-twentyfold.html" aria-label="View Twentyfold case study">View more</a>
+            <div class="ab-right"><ul>
+              <li>Shaped product and design strategies aligned with business goals and user needs across fintech and enterprise projects.</li>
+              <li>Collaborated with stakeholders and developers to deliver scalable UI/UX solutions for clients.</li>
+              <li>Balanced user experience, technical feasibility, and product objectives throughout the design process.</li>
+              <li>Clients include: DiginexESG, Ascential.</li>
+            </ul></div>
+          </div>
+          <div class="ab-row">
+            <div class="ab-left">
+              <div class="role">Junior UI/UX Designer</div>
+              <div class="org"><a class="ab-org-link" href="https://validusgrp.com/" target="_blank" rel="noopener noreferrer">Validus<svg class="ext-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/></svg></a></div>
+              <div class="meta">Jun 2020 – Jun 2021</div>
+              <div class="meta">Vietnam</div>
+            </div>
+            <div class="ab-right"><ul>
+              <li>Worked with Product Leadership to define features and improve financial product experiences through user-centered design.</li>
+              <li>Conducted market and competitor research to support product decisions across Singapore, Thailand, and Vietnam.</li>
+              <li>Partnered with developers to ensure design solutions were practical, scalable, and aligned with business needs.</li>
+            </ul></div>
+          </div>
+        </div>
+        <div class="rule"></div>
+        <div class="ab-block">
+          <div class="ab-eyebrow">Skills</div>
+          <div class="ab-grid ab-skills">
+            <div class="grp ab-skills-how"><div class="ab-sub">How I work</div>
+              <p>Discovery → hypothesis → low-fi validation → high-fidelity design → post-launch evaluation.</p>
+              <p>I start from the user, who pays, what they're buying, and which design decisions move the metrics that matter.</p>
+            </div>
+            <div class="grp ab-skills-markets"><div class="ab-sub">Markets and languages</div>
+              <p>Designed for users across Vietnam, Singapore, Thailand, and European enterprise contexts.</p>
+              <ul><li>Vietnamese (native)</li><li>English (professional working proficiency)</li></ul>
+            </div>
+            <div class="grp ab-skills-domains"><div class="ab-sub">Domains</div>
+              <p>Fintech. Intelligence platforms, lending marketplaces, SME supply chain financing, regulated multi-market environments.</p>
+              <p>Sustainability tech. ESG reporting, multi-framework disclosure, multi-stakeholder workflows, enterprise compliance.</p>
+              <p>Enterprise B2B. Multi-entity modelling, complex data products, design systems, subscription surfaces.</p>
+            </div>
+            <div class="grp ab-skills-tools"><div class="ab-sub">Tools</div>
+              <p>Figma · FigJam · Maze · Miro · Jira</p>
             </div>
           </div>
-          <div class="detail">
-            <div class="detail-inner">
-            <div class="ddiv"></div>
-            <div class="detail-in">
-              <div class="slotwrap"><img src="./assets/intro/twentyfold.jpg" alt="Twentyfold fintech intelligence platform" width="1400" height="719" loading="eager" decoding="async" fetchpriority="high"></div>
-              <div class="d-text">
-                <div class="d-block"><div class="d-lab">What it is</div><p>Fintech intelligence platform built for Money20/20.</p></div>
-                <div class="d-block"><div class="d-lab">Role + team</div><p>Sole product designer · 1 product owner · 6 engineers</p></div>
-                <div class="d-tags"><span>Information architecture</span><span>Fintech intelligence</span></div>
+        </div>
+        <div class="rule"></div>
+        <div class="ab-block ab-duo">
+          <div class="ab-duo-col">
+            <div class="ab-eyebrow">Education</div>
+            <div class="grp">
+              <div class="ab-sub">Tampere University of Applied Sciences (TAMK), Finland</div>
+              <div class="grp-body">
+                <p>Bachelor of Culture and Arts</p>
+                <p>Minor: Interactive Media</p>
               </div>
             </div>
-            </div>
           </div>
-        </article>
+          <div class="ab-duo-col">
+            <div class="ab-eyebrow">Recommendations</div>
+            <p class="ab-quote">"Oanh is a critical thinker. Her inquisitive mind and appreciation for art clearly reflect the qualities of a promising UX designer. She works closely with her development team to ensure her designs are practical and achievable, and this collaborative spirit would make her a valuable addition to any organisation."
+              <span class="by">Keith Ong · Technical Manager, Validus</span>
+            </p>
+          </div>
+        </div>
+        <footer class="left-footer">
+          <div class="rule"></div>
+          <div class="contact">
+            <a class="ci" href="mailto:lengocoanh1911@gmail.com">lengocoanh1911@gmail.com</a>
+            <a class="ci" href="tel:+3584578338834">+358 457 833 8834</a>
+            <a class="ci link" href="https://www.behance.net/lengocoanh" target="_blank" rel="noopener noreferrer">Behance<svg class="ext-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/></svg></a>
+            <a class="ci link" href="https://www.linkedin.com/in/oanh-le-391289180" target="_blank" rel="noopener noreferrer">LinkedIn<svg class="ext-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/></svg></a>
+          </div>
+        </footer>
+      </div>
 
-        <!-- 02 -->
-        <article class="tape tape-diginex" data-case="case-diginex.html">
-          <div class="tdust"></div>
-          <div class="spine">
-            <div class="cap-l"><svg class="ddlogo" viewBox="0 0 34 14" aria-hidden="true" fill="none"><path d="M2 1h7a6 6 0 0 1 0 12H2zM6 4v6" stroke="currentColor" stroke-width="1.6"/><path d="M32 1h-7a6 6 0 0 0 0 12h7zM28 4v6" stroke="currentColor" stroke-width="1.6"/></svg></div>
-            <div class="label">
-              <div class="tname"><span class="tname-long">DiginexESG - ESG Reporting Platform</span><span class="tname-short">DiginexESG</span></div>
-              <div class="talbum"><span class="talbum-org">Diginex · </span>UK · Paid Project</div>
-            </div>
-            <div class="cap-r">
-              <a class="viewmore" href="case-diginex.html" aria-label="View DiginexESG case study">View more</a>
-            </div>
-          </div>
-          <div class="detail">
-            <div class="detail-inner">
-            <div class="ddiv"></div>
-            <div class="detail-in">
-              <div class="slotwrap"><img src="./assets/intro/esg.jpg" alt="DiginexESG sustainability reporting platform" width="1400" height="719" loading="eager" decoding="async"></div>
-              <div class="d-text">
-                <div class="d-block"><div class="d-lab">What it is</div><p>Powered ESG reporting platform for enterprise sustainability teams.</p></div>
-                <div class="d-block"><div class="d-lab">Role + team</div><p>1 of 4 designers · 3 product manager · 6 engineers</p></div>
-                <div class="d-tags"><span>Sustainability tech</span><span>B2B SaaS</span></div>
-              </div>
-            </div>
-            </div>
-          </div>
-        </article>
-
-        <!-- 03 -->
-        <article class="tape tape-validus" data-case="case-validus.html">
-          <div class="tdust"></div>
-          <div class="spine">
-            <div class="cap-l"><svg class="ddlogo" viewBox="0 0 34 14" aria-hidden="true" fill="none"><path d="M2 1h7a6 6 0 0 1 0 12H2zM6 4v6" stroke="currentColor" stroke-width="1.6"/><path d="M32 1h-7a6 6 0 0 0 0 12h7zM28 4v6" stroke="currentColor" stroke-width="1.6"/></svg></div>
-            <div class="label">
-              <div class="tname"><span class="tname-long">Validus - P2P Lending Platform</span><span class="tname-short">Validus</span></div>
-              <div class="talbum"><span class="talbum-org">Validus · </span>Vietnam · Paid Project</div>
-            </div>
-            <div class="cap-r">
-              <a class="viewmore" href="case-validus.html" aria-label="View Validus case study">View more</a>
-            </div>
-          </div>
-          <div class="detail">
-            <div class="detail-inner">
-            <div class="ddiv"></div>
-            <div class="detail-in">
-              <div class="slotwrap"><img src="./assets/intro/validus.jpg" alt="Validus investment web app" width="1400" height="719" loading="eager" decoding="async"></div>
-              <div class="d-text">
-                <div class="d-block"><div class="d-lab">What it is</div><p>SME lending marketplace connecting accredited investors and SMEs across Southeast Asia.</p></div>
-                <div class="d-block"><div class="d-lab">Role + team</div><p>1 of 2 designers · 1 product owner · 8 engineers</p></div>
-                <div class="d-tags"><span>Investment</span><span>Two-sided marketplace</span><span>Multi-market</span></div>
-              </div>
-            </div>
-            </div>
-          </div>
-        </article>
-
-        <!-- 04 personal -->
-        <article class="tape tape-stupid" id="work-stupid" data-case="case-stupid.html" style="scroll-margin-top:90px">
-          <div class="tdust"></div>
-          <div class="spine">
-            <div class="cap-l"><svg class="ddlogo" viewBox="0 0 34 14" aria-hidden="true" fill="none"><path d="M2 1h7a6 6 0 0 1 0 12H2zM6 4v6" stroke="currentColor" stroke-width="1.6"/><path d="M32 1h-7a6 6 0 0 0 0 12h7zM28 4v6" stroke="currentColor" stroke-width="1.6"/></svg></div>
-            <div class="label">
-              <div class="tname"><span class="tname-long"><span class="tname-stupid">"Stupid"</span><span class="tname-rest"> experience diaries in Finnish products</span></span><span class="tname-short"><span class="tname-stupid">"Stupid"</span><span class="tname-rest"> experience diaries</span></span></div>
-              <div class="talbum">Finland · Personal Project</div>
-            </div>
-            <div class="cap-r">
-              <a class="viewmore" href="case-stupid.html" aria-label="View Stupid experiences case study">View more</a>
-            </div>
-          </div>
-          <div class="detail">
-            <div class="detail-inner">
-            <div class="ddiv"></div>
-            <div class="detail-in">
-              <div class="slotwrap"><img src="./assets/intro/stupid.jpg" alt="Stupid experiences — illustrated study of everyday app friction in Finland" width="1400" height="885" loading="eager" decoding="async"></div>
-              <div class="d-text">
-                <div class="d-block"><div class="d-lab">Products</div><p>S-mobiili, K-ruoka, One4all…</p></div>
-                <div class="d-block"><div class="d-lab">Role + scope</div><p>Just me, diary, critique, and improve proposals.</p></div>
-                <div class="d-tags"><span>UX diary</span><span>Finland</span></div>
-              </div>
-            </div>
-            </div>
-          </div>
-        </article>
-
+      <div id="panel-left-side" class="left-panel side-panel" hidden>
+        <h2 class="side-title">Side Projects</h2>
+        <p class="side-empty">Upload later</p>
+      </div>
       </div>
     </div>
-  </section>
+    <div class="home-left-foot">
+      <nav class="home-nav" aria-label="Left column">
+        <div class="left-tab-row" data-left-row="about">
+          <a href="#about" class="left-tab" data-left="about">About</a>
+          <button type="button" class="left-close" data-close="about" aria-label="Close About" hidden>
+            <svg class="left-close-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12"/><path d="M18 6 6 18"/></svg>
+          </button>
+        </div>
+        <div class="left-tab-row" data-left-row="side">
+          <a href="#side" class="left-tab" data-left="side">Side Projects</a>
+          <button type="button" class="left-close" data-close="side" aria-label="Close Side Projects" hidden>
+            <svg class="left-close-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12"/><path d="M18 6 6 18"/></svg>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </aside>
+
+  <div class="home-right">
+    <div class="home-right-scroll" id="rightScroll">
+      <div class="scroll-inner scroll-inner-right">
+      <div id="panel-work" class="right-panel">
+      <section id="work" class="work-section">
+        <div class="section-head">
+          <h2>Selected Work</h2>
+        </div>
+        <div class="stack" id="stack">
+
+          <article class="tape tape-twentyfold" data-case="case-twentyfold.html">
+            <div class="spine">
+              <div class="cap-l"><svg class="ddlogo" viewBox="0 0 34 14" aria-hidden="true" fill="none"><path d="M2 1h7a6 6 0 0 1 0 12H2zM6 4v6" stroke="currentColor" stroke-width="1.6"/><path d="M32 1h-7a6 6 0 0 0 0 12h7zM28 4v6" stroke="currentColor" stroke-width="1.6"/></svg></div>
+              <div class="label">
+                <div class="tname"><span class="tname-long">Twentyfold - Fintech Data Platform</span><span class="tname-short">Twentyfold</span></div>
+                <div class="talbum"><span class="talbum-org">Ascential · </span>UK · Paid Project</div>
+              </div>
+              <div class="cap-r">
+                <a class="viewmore" href="case-twentyfold.html" aria-label="View Twentyfold case study">View more</a>
+              </div>
+            </div>
+            <div class="detail">
+              <div class="detail-inner">
+                <div class="ddiv"></div>
+                <div class="detail-in">
+                  <div class="slotwrap"><img src="./assets/intro/twentyfold.jpg" alt="Twentyfold fintech intelligence platform" width="1400" height="719" loading="eager" decoding="async" fetchpriority="high"></div>
+                  <div class="d-text">
+                    <div class="d-block"><div class="d-lab">What it is</div><p>Fintech intelligence platform built for Money20/20.</p></div>
+                    <div class="d-block"><div class="d-lab">Role + team</div><p>Sole product designer · 1 product owner · 6 engineers</p></div>
+                    <div class="d-tags"><span>Information architecture</span><span>Fintech intelligence</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="tape tape-diginex" data-case="case-diginex.html">
+            <div class="spine">
+              <div class="cap-l"><svg class="ddlogo" viewBox="0 0 34 14" aria-hidden="true" fill="none"><path d="M2 1h7a6 6 0 0 1 0 12H2zM6 4v6" stroke="currentColor" stroke-width="1.6"/><path d="M32 1h-7a6 6 0 0 0 0 12h7zM28 4v6" stroke="currentColor" stroke-width="1.6"/></svg></div>
+              <div class="label">
+                <div class="tname"><span class="tname-long">DiginexESG - ESG Reporting Platform</span><span class="tname-short">DiginexESG</span></div>
+                <div class="talbum"><span class="talbum-org">Diginex · </span>UK · Paid Project</div>
+              </div>
+              <div class="cap-r">
+                <a class="viewmore" href="case-diginex.html" aria-label="View DiginexESG case study">View more</a>
+              </div>
+            </div>
+            <div class="detail">
+              <div class="detail-inner">
+                <div class="ddiv"></div>
+                <div class="detail-in">
+                  <div class="slotwrap"><img src="./assets/intro/esg.jpg" alt="DiginexESG sustainability reporting platform" width="1400" height="719" loading="eager" decoding="async"></div>
+                  <div class="d-text">
+                    <div class="d-block"><div class="d-lab">What it is</div><p>Powered ESG reporting platform for enterprise sustainability teams.</p></div>
+                    <div class="d-block"><div class="d-lab">Role + team</div><p>1 of 4 designers · 3 product manager · 6 engineers</p></div>
+                    <div class="d-tags"><span>Sustainability tech</span><span>B2B SaaS</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="tape tape-validus" data-case="case-validus.html">
+            <div class="spine">
+              <div class="cap-l"><svg class="ddlogo" viewBox="0 0 34 14" aria-hidden="true" fill="none"><path d="M2 1h7a6 6 0 0 1 0 12H2zM6 4v6" stroke="currentColor" stroke-width="1.6"/><path d="M32 1h-7a6 6 0 0 0 0 12h7zM28 4v6" stroke="currentColor" stroke-width="1.6"/></svg></div>
+              <div class="label">
+                <div class="tname"><span class="tname-long">Validus - P2P Lending Platform</span><span class="tname-short">Validus</span></div>
+                <div class="talbum"><span class="talbum-org">Validus · </span>Vietnam · Paid Project</div>
+              </div>
+              <div class="cap-r">
+                <a class="viewmore" href="case-validus.html" aria-label="View Validus case study">View more</a>
+              </div>
+            </div>
+            <div class="detail">
+              <div class="detail-inner">
+                <div class="ddiv"></div>
+                <div class="detail-in">
+                  <div class="slotwrap"><img src="./assets/intro/validus.jpg" alt="Validus investment web app" width="1400" height="719" loading="eager" decoding="async"></div>
+                  <div class="d-text">
+                    <div class="d-block"><div class="d-lab">What it is</div><p>SME lending marketplace connecting accredited investors and SMEs across Southeast Asia.</p></div>
+                    <div class="d-block"><div class="d-lab">Role + team</div><p>1 of 2 designers · 1 product owner · 8 engineers</p></div>
+                    <div class="d-tags"><span>Investment</span><span>Two-sided marketplace</span><span>Multi-market</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="tape tape-stupid" id="work-stupid" data-case="case-stupid.html">
+            <div class="spine">
+              <div class="cap-l"><svg class="ddlogo" viewBox="0 0 34 14" aria-hidden="true" fill="none"><path d="M2 1h7a6 6 0 0 1 0 12H2zM6 4v6" stroke="currentColor" stroke-width="1.6"/><path d="M32 1h-7a6 6 0 0 0 0 12h7zM28 4v6" stroke="currentColor" stroke-width="1.6"/></svg></div>
+              <div class="label">
+                <div class="tname"><span class="tname-long"><span class="tname-stupid">"Stupid"</span><span class="tname-rest"> experience diaries in Finnish products</span></span><span class="tname-short"><span class="tname-stupid">"Stupid"</span><span class="tname-rest"> experience diaries</span></span></div>
+                <div class="talbum">Finland · Personal Project</div>
+              </div>
+              <div class="cap-r">
+                <a class="viewmore" href="case-stupid.html" aria-label="View Stupid experiences case study">View more</a>
+              </div>
+            </div>
+            <div class="detail">
+              <div class="detail-inner">
+                <div class="ddiv"></div>
+                <div class="detail-in">
+                  <div class="slotwrap"><img src="./assets/intro/stupid.jpg" alt="Stupid experiences — illustrated study of everyday app friction in Finland" width="1400" height="885" loading="eager" decoding="async"></div>
+                  <div class="d-text">
+                    <div class="d-block"><div class="d-lab">Products</div><p>S-mobiili, K-ruoka, One4all…</p></div>
+                    <div class="d-block"><div class="d-lab">Role + scope</div><p>Just me, diary, critique, and improve proposals.</p></div>
+                    <div class="d-tags"><span>UX diary</span><span>Finland</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </section>
+      </div>
+      <div id="panel-case" class="right-panel home-case-panel" hidden>
+        <main class="cs home-cs"></main>
+      </div>
+      </div>
+    </div>
   </div>
-
-  <section id="panel-about" class="home-panel about-panel" hidden>
-    <div class="wrap">
-      <header class="cs-hero">
-        <h1 class="cs-title">Oanh Le</h1>
-        <p class="cs-sub">Product Designer in fintech, sustainability tech, and enterprise B2B SaaS.</p>
-      </header>
-      <div class="rule"></div>
-      <div class="ab-block">
-        <div class="ab-eyebrow">Experience</div>
-        <div class="ab-row">
-          <div class="ab-left">
-            <div class="role">Product Designer</div>
-            <div class="org"><a class="ab-org-link" href="https://www.hodfords.com/home/main/en/" target="_blank" rel="noopener noreferrer">Hodfords<svg class="ext-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/></svg></a></div>
-            <div class="meta">Jun 2021 – Aug 2023</div>
-            <div class="meta">Remote · Vietnam</div>
-          </div>
-          <div class="ab-right"><ul>
-            <li>Shaped product and design strategies aligned with business goals and user needs across fintech and enterprise projects.</li>
-            <li>Collaborated with stakeholders and developers to deliver scalable UI/UX solutions for clients.</li>
-            <li>Balanced user experience, technical feasibility, and product objectives throughout the design process.</li>
-            <li>Clients include: DiginexESG, Ascential.</li>
-          </ul></div>
-        </div>
-        <div class="ab-row">
-          <div class="ab-left">
-            <div class="role">Junior UI/UX Designer</div>
-            <div class="org"><a class="ab-org-link" href="https://validusgrp.com/" target="_blank" rel="noopener noreferrer">Validus<svg class="ext-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/></svg></a></div>
-            <div class="meta">Jun 2020 – Jun 2021</div>
-            <div class="meta">Vietnam</div>
-          </div>
-          <div class="ab-right"><ul>
-            <li>Worked with Product Leadership to define features and improve financial product experiences through user-centered design.</li>
-            <li>Conducted market and competitor research to support product decisions across Singapore, Thailand, and Vietnam.</li>
-            <li>Partnered with developers to ensure design solutions were practical, scalable, and aligned with business needs.</li>
-          </ul></div>
-        </div>
-      </div>
-      <div class="rule"></div>
-      <div class="ab-block">
-        <div class="ab-eyebrow">Skills</div>
-        <div class="ab-grid ab-skills">
-          <div class="grp ab-skills-how"><div class="ab-sub">How I work</div>
-            <p>Discovery → hypothesis → low-fi validation → high-fidelity design → post-launch evaluation.</p>
-            <p>I start from the user, who pays, what they're buying, and which design decisions move the metrics that matter.</p>
-          </div>
-          <div class="grp ab-skills-markets"><div class="ab-sub">Markets and languages</div>
-            <p>Designed for users across Vietnam, Singapore, Thailand, and European enterprise contexts.</p>
-            <ul><li>Vietnamese (native)</li><li>English (professional working proficiency)</li></ul>
-          </div>
-          <div class="grp ab-skills-domains"><div class="ab-sub">Domains</div>
-            <p>Fintech. Intelligence platforms, lending marketplaces, SME supply chain financing, regulated multi-market environments.</p>
-            <p>Sustainability tech. ESG reporting, multi-framework disclosure, multi-stakeholder workflows, enterprise compliance.</p>
-            <p>Enterprise B2B. Multi-entity modelling, complex data products, design systems, subscription surfaces.</p>
-          </div>
-          <div class="grp ab-skills-tools"><div class="ab-sub">Tools</div>
-            <p>Figma · FigJam · Maze · Miro · Jira</p>
-          </div>
-        </div>
-      </div>
-      <div class="rule"></div>
-      <div class="ab-block ab-duo">
-        <div class="ab-duo-col">
-          <div class="ab-eyebrow">Education</div>
-          <div class="grp">
-            <div class="ab-sub">Tampere University of Applied Sciences (TAMK), Finland</div>
-            <div class="grp-body">
-              <p>Bachelor of Culture and Arts</p>
-              <p>Minor: Interactive Media</p>
-            </div>
-          </div>
-        </div>
-        <div class="ab-duo-col">
-          <div class="ab-eyebrow">Recommendations</div>
-          <p class="ab-quote">"Oanh is a critical thinker. Her inquisitive mind and appreciation for art clearly reflect the qualities of a promising UX designer. She works closely with her development team to ensure her designs are practical and achievable, and this collaborative spirit would make her a valuable addition to any organisation."
-            <span class="by">Keith Ong · Technical Manager, Validus</span>
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
 </main>
-
-<!-- FOOTER -->
-<footer>
-  <div class="wrap">
-    <div class="rule"></div>
-    <div class="contact">
-      <a class="ci" href="mailto:lengocoanh1911@gmail.com">lengocoanh1911@gmail.com</a>
-      <a class="ci" href="tel:+3584578338834">+358 457 833 8834</a>
-      <a class="ci link" href="https://www.behance.net/lengocoanh" target="_blank" rel="noopener noreferrer">Behance<svg class="ext-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/></svg></a>
-      <a class="ci link" href="https://www.linkedin.com/in/oanh-le-391289180" target="_blank" rel="noopener noreferrer">LinkedIn<svg class="ext-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/></svg></a>
-    </div>
-  </div>
-</footer>
 </div>
 
+<script src="casestudy.js"></script>
 <script src="home.js"></script>
 </body>
 </html>

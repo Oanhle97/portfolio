@@ -17,8 +17,9 @@
 </svg>
 <main class="cs">
 
-  <nav class="cs-back" aria-label="Back to home">
-    <a class="cs-back-link" href="index.html"><svg class="cs-back-icon" viewBox="0 0 22 22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11c2.5-.2 5-.35 9-.5"/><path d="M10 5.5c2 1.6 3.5 3.4 5.5 5.5"/><path d="M10 16c2-1.6 3.5-3.2 5.5-5.5"/></svg><span>Back to home</span></a>
+  <nav class="cs-back" aria-label="Case study navigation">
+    <a class="cs-nav-link cs-nav-close" href="index.html#work" aria-label="Close case study"><svg class="cs-nav-close-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12"/><path d="M18 6 6 18"/></svg></a>
+    <a class="cs-nav-link cs-nav-next" href="case-validus.html">Next work<svg class="cs-nav-next-icon" viewBox="0 0 22 22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11c2.5-.2 5-.35 9-.5"/><path d="M10 5.5c2 1.6 3.5 3.4 5.5 5.5"/><path d="M10 16c2-1.6 3.5-3.2 5.5-5.5"/></svg></a>
   </nav>
   <header class="cs-hero">
     <div class="cs-title-row">
@@ -27,7 +28,6 @@
     </div>
     <p class="cs-sub">ESG and sustainability reporting platform for enterprise teams, built for Diginex.</p>
     <div class="cs-meta">Product Designer · 2021–2022 · Web platform</div>
-    <a class="cs-meta-link cs-archive-pdf" data-archive-open data-archive-modal="esgArchiveModal" href="assets/ESG-old-port.pdf" target="_blank" rel="noopener noreferrer">View the initial portfolio version</a>
   </header>
   <div class="cs-figure"><figure class="cs-figure-img"><img src="assets/diginex/1.jpg" alt="DiginexESG sustainability report builder" width="1600" height="844" loading="eager" decoding="async"></figure></div>
   <div class="rule"></div>
@@ -44,7 +44,6 @@
   <section class="sec"><h2 class="sec-label">Approach</h2>
     <p>I joined as the second-generation designer, working closely with a product manager and collaborating with other teams across the same product branch to translate evolving enterprise requirements into product features. Development was incremental, with each feature validated through feedback from real ESG users. In parallel, the design system was rebuilt to support the broader Diginex ecosystem, allowing ESG patterns to scale across other sustainability products.</p>
   </section>
-  <div class="rule"></div>
   <section class="sec"><h2 class="sec-label">Key design decisions</h2>
     <div class="decision"><div class="d-title"><span class="d-num">01</span>Modelling the company before modelling the report</div>
       <p>A multinational doesn't report as a single entity, it reports as a parent organisation with subsidiaries, each with its own emissions, users, and disclosures. The decision was to make Entity Management a first-class surface, not a settings page. Users build their corporate structure as a navigable hierarchy.</p>
@@ -55,28 +54,28 @@
       <div class="cs-figure"><figure class="cs-figure-img"><img src="assets/diginex/3.jpg" alt="DiginexESG Report Collaborators — KPIs, comments and evidence requests" width="1600" height="1072" loading="lazy" decoding="async"></figure></div>
     </div>
   </section>
-  <div class="rule"></div>
   <section class="sec"><h2 class="sec-label">Outcomes</h2>
     <p>Designed a platform that supports how enterprise ESG reporting actually works, multi-stakeholder, multi-entity, audit-relevant, making single-user platform assumptions obsolete.</p>
     <p>Shipped the revamp as a second-generation designer working with one product manager, validated against real ESG users at each stage of delivery.</p>
   </section>
-</main>
-
-<div class="cs-archive-modal" id="esgArchiveModal" aria-hidden="true">
-  <div class="cs-archive-modal-backdrop" data-archive-close></div>
-  <div class="cs-archive-modal-panel" role="dialog" aria-modal="true" aria-label="Initial DiginexESG portfolio">
-    <button type="button" class="cs-archive-modal-close" data-archive-close aria-label="Close">×</button>
-    <div class="cs-archive-modal-scroll">
-      <figure class="cs-archive-strip" aria-label="Initial DiginexESG portfolio">
-        <img src="assets/ESG-old-port/1.jpg" alt="" width="1600" height="1200" loading="eager" decoding="async">
-        <img src="assets/ESG-old-port/2.jpg" alt="" width="1600" height="1200" loading="lazy" decoding="async">
-        <img src="assets/ESG-old-port/3.jpg" alt="" width="1600" height="1200" loading="lazy" decoding="async">
-        <img src="assets/ESG-old-port/4.jpg" alt="" width="1600" height="1200" loading="lazy" decoding="async">
-        <img src="assets/ESG-old-port/5.jpg" alt="" width="1600" height="1200" loading="lazy" decoding="async">
-      </figure>
+  <section class="cs-archive" data-archive>
+    <div class="cs-archive-head">
+      <button type="button" class="cs-archive-toggle" aria-expanded="false">Screens and components<svg class="cs-archive-arr" viewBox="0 0 22 22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11c2.5-.2 5-.35 9-.5"/><path d="M10 5.5c2 1.6 3.5 3.4 5.5 5.5"/><path d="M10 16c2-1.6 3.5-3.2 5.5-5.5"/></svg></button>
+      <a class="text-btn cs-archive-pdf" href="assets/ESG-old-port.pdf" target="_blank" rel="noopener noreferrer">Open the PDF</a>
     </div>
-  </div>
-</div>
+    <div class="cs-archive-detail">
+      <div class="cs-archive-detail-inner">
+        <div class="cs-archive-strip" role="group" aria-label="DiginexESG screenshots and component library">
+          <img src="assets/ESG-old-port/1.jpg" alt="" width="1600" height="1200" loading="lazy" decoding="async">
+          <img src="assets/ESG-old-port/2.jpg" alt="" width="1600" height="1200" loading="lazy" decoding="async">
+          <img src="assets/ESG-old-port/3.jpg" alt="" width="1600" height="1200" loading="lazy" decoding="async">
+          <img src="assets/ESG-old-port/4.jpg" alt="" width="1600" height="1200" loading="lazy" decoding="async">
+          <img src="assets/ESG-old-port/5.jpg" alt="" width="1600" height="1200" loading="lazy" decoding="async">
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
 
 <script src="casestudy.js"></script>
 </body>

@@ -21,6 +21,8 @@
   --body-font:'Source Serif 4',serif;
   --accent:#D24228;
   --stupid-yellow:#E8C547;
+  --btn-primary:var(--stupid-yellow);
+  --btn-secondary:var(--cream);
 }
 
 *{margin:0;padding:0;box-sizing:border-box;}
@@ -36,6 +38,9 @@ body{
 }
 .dust,.grain,.vig{display:none;}
 a{color:inherit;text-decoration:none;}
+.text-btn{font-family:var(--body-font);font-size:14px;font-weight:400;font-style:normal;letter-spacing:normal;line-height:1.5;color:var(--btn-primary);background:none;border:none;padding:0;cursor:pointer;text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;transition:opacity .2s;}
+button.text-btn{font:inherit;}
+.text-btn:hover{opacity:.85;}
 svg.defs{position:absolute;width:0;height:0;}
 
 .rule{height:3px;background:var(--cream);filter:url(#rough);opacity:.85;}
