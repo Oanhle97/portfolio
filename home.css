@@ -57,12 +57,12 @@ header.bar{position:fixed;top:0;left:0;right:0;z-index:40;background:var(--bar-g
 .stack{display:flex;flex-direction:column;gap:22px;}
 
 /* ---- Project cards ---- */
-.tape{position:relative;margin:0;padding:12px;border-radius:7px;cursor:pointer;color:var(--ink);background:transparent;box-shadow:none;}
-.tape::before{content:"";position:absolute;inset:0;border:3.5px solid var(--cream);border-radius:7px;filter:url(#rough);pointer-events:none;z-index:2;}
-.tape::after{content:"";position:absolute;inset:7px;border:1.5px solid var(--cream);border-radius:4px;filter:url(#rough2);opacity:.5;pointer-events:none;z-index:2;}
+.tape{position:relative;margin:0;padding:12px;border-radius:7px;cursor:pointer;color:var(--ink);background:var(--tape);box-shadow:none;}
+.tape::before{content:"";position:absolute;inset:0;border:3.5px solid var(--ink);border-radius:7px;filter:url(#rough);pointer-events:none;z-index:2;}
+.tape::after{content:"";position:absolute;inset:7px;border:1.5px solid var(--ink);border-radius:4px;filter:url(#rough2);opacity:.5;pointer-events:none;z-index:2;}
 
 .spine{display:grid;grid-template-columns:auto 1fr;column-gap:12px;row-gap:8px;align-items:center;min-height:0;padding:14px 16px;border-radius:4px;overflow:hidden;}
-.cap-l{grid-column:1;grid-row:1;flex:none;align-self:center;display:flex;align-items:center;justify-content:center;position:relative;}
+.cap-l{grid-column:1;grid-row:1;flex:none;display:flex;align-items:center;justify-content:center;position:relative;}
 .cap-l::after{display:none;}
 .ddlogo{width:36px;height:auto;display:block;filter:url(#rough2);}
 
