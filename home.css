@@ -287,7 +287,7 @@ header.bar{position:fixed;top:0;left:0;right:0;z-index:40;background:var(--bar-g
   .home-case-panel .home-cs{max-width:none;margin:0;padding:0 0 48px;--cs-gutter:0;animation:homeCaseIn .32s cubic-bezier(.2,.8,.2,1);}
   .home-case-panel .cs-back{width:100%;margin:0 0 20px;padding:14px 0 18px;position:sticky;top:0;z-index:5;background:var(--page);}
   .home-case-panel .cs-nav-close{color:var(--cream);}
-  .home-case-panel .cs-nav-next{color:var(--btn-secondary);}
+  .home-case-panel .cs-nav-next{color:var(--nav-next);}
   .home-case-panel .cs-nav-close-icon,
   .home-case-panel .cs-nav-next-icon{width:24px;height:24px;}
   .home-case-panel .cs-title-link svg{width:24px;height:24px;}

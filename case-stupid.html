@@ -28,7 +28,7 @@
   </header>
   <div class="rule"></div>
   <section class="sec"><h2 class="sec-label">Why this project exists</h2>
-    <p>I moved to Finland and started using the apps that shape daily life, grocery, banking, student housing, and so on. This is where I write those moments down, look at the intent behind the experience, and ask what I'd change.</p>
+    <p>I moved to Finland and started using the apps that shape daily life: grocery, banking, student housing, and so on. Using them, I got frustrated more than a few times, and I wanted to understand why. This is where I write those moments down, look at the intent behind the experience, and ask what I'd change. Good usability should work for everyone, not just the people who already know the system.</p>
   </section>
   <section class="sec"><h2 class="sec-label">How I audit</h2>
     <p>Each audit asks three questions:</p>
@@ -39,14 +39,14 @@
     </ul>
     <p>The friction is usually visible to anyone using the app, not just designers. Every proposed fix is something that could plausibly ship.</p>
   </section>
-  <section class="sec"><h2 class="sec-label">S-mobiili application</h2>
+  <section class="sec"><h2 class="sec-label sec-label-row"><span>S-mobiili application</span><img class="sec-label-icon" src="assets/stupid/Spankki%20icon.png" alt="" width="96" height="96" loading="lazy" decoding="async"></h2>
     <div class="decision"><div class="d-title">What was I trying to do</div>
       <p>I'm a newcomer to Finland, and S-mobiili was my first Finnish bank account. The app was only available in Finnish. I often forgot my PIN code when depositing. The first time it happened, I screenshotted the interface and translated it with another app. Every time after that, I relied on visual memory alone by tapping through icons I remembered from the screenshot, hoping I'd land on the right one. Sometimes I tapped into other features by mistake, and all of those taps cost me money.</p>
     </div>
     <div class="decision"><div class="d-title">Where did the product fight me</div>
       <p>There was no English language option at the time. A user who can't read Finnish has only one strategy left: tap every icon and menu until something looks right. The interfaces for "Check PIN code," "Order card's PIN code by mail," and "Card with a PIN code of your choice" all sit in the same group and look almost identical (see below). All three charge a fee, and I had to tap through every one of them to find the one I actually wanted.</p>
     </div>
-    <div class="cs-figure"><figure class="cs-figure-img"><img src="assets/stupid/1.jpg" alt="S-mobiili — Check PIN code, order PIN by mail, and custom PIN flows (visually similar)" width="740" height="549" loading="lazy" decoding="async"></figure></div>
+    <div class="cs-figure"><figure class="cs-figure-img"><img src="assets/stupid/Spankki.jpg" alt="S-mobiili — Check PIN code, order PIN by mail, and custom PIN flows (visually similar)" width="740" height="549" loading="lazy" decoding="async"></figure></div>
     <div class="decision"><div class="d-title">Why it breaks</div>
       <ul>
         <li>The app is designed for Finnish-speaking customers as the default, not as a setting that can be changed. That's a localisation decision, not a usability one, but it shapes every other interaction.</li>
@@ -60,13 +60,33 @@
       </ul>
     </div>
   </section>
-  <section class="sec"><h2 class="sec-label">K-ruoka application</h2><p>Coming soon…</p></section>
-  <section class="sec"><h2 class="sec-label">One4all application</h2><p>Coming soon…</p></section>
-  <section class="sec"><h2 class="sec-label">What this project is teaching me</h2><p>Coming soon…</p></section>
-  <section class="sec"><h2 class="sec-label">Reflection</h2>
-    <p>I keep this project running because the apps keep updating. Every release is a chance to see whether a friction point gets fixed, ignored, replaced, or quietly kept because it works for the company even if it doesn't work for the user.</p>
+  <section class="sec"><h2 class="sec-label sec-label-row"><span>K-ruoka application</span><img class="sec-label-icon" src="assets/stupid/K-ruoka%20icon.png" alt="" width="96" height="96" loading="lazy" decoding="async"></h2>
+    <div class="decision"><div class="d-title">What I was trying to do</div>
+      <p>I shop at K-Group stores and pay with my phone. Over a year of shopping, I collected Plussa money, the cashback the loyalty program gives you, which you can spend on future purchases. I assumed it worked the way most loyalty programs do: show my Plussa card in the K-Ruoka app at checkout, and the balance would either be applied automatically or offered to me. I never used a physical card, because the whole point of a shopping app is that I don't need to carry one.</p>
+    </div>
+    <div class="decision"><div class="d-title">Where did the product fight me</div>
+      <p>Two things went wrong.</p>
+      <p>First, the balance was never applied. Nothing at checkout used my Plussa money. There was a message in the app saying Plussa money can't be used with this online card, but it sits on the barcode screen, the one I hold up for two seconds at the checkout counter. I never had time to read it there. I only found out by accident, when a friend mentioned you need a physical card to spend it. I checked and found €123 sitting there, unused.</p>
+      <p>Second, even after I knew, I still couldn't find how to use it. I searched the app, but nothing clearly explained how to spend the balance I could see on the screen.</p>
+    </div>
+    <div class="cs-figure"><figure class="cs-figure-img"><img src="assets/stupid/K-ruoka.jpg" alt="K-Ruoka — Plussa barcode screen with message that Plussa money can't be used with the online card" width="3910" height="3636" loading="lazy" decoding="async"></figure></div>
+    <div class="decision"><div class="d-title">Why it breaks</div>
+      <ul>
+        <li>The information exists, but it's placed where no one reads it. The Plussa card page is a screen you open for two seconds at the checkout: barcode up, show the cashier, put the phone away. No one stands at a busy till, holding up the line, reading the fine print under the barcode. The screen's whole job is to be shown and dismissed quickly, so burying a critical limitation on it means burying it by design.</li>
+        <li>The deeper problem is that the app teaches you the wrong mental model. It shows you your Plussa balance. It shows you a Plussa card. It lets you show that card at checkout. Every signal says "this is how you use Plussa," except the one thing you actually can't do with it, which is spend the money you've saved. The app looks like a complete loyalty tool while being deliberately incomplete in the one place that matters.</li>
+      </ul>
+    </div>
+    <div class="decision"><div class="d-title">What's the smallest change that would help</div>
+      <p>The smallest fix isn't more text. It's putting the guidance where the money appears.</p>
+      <ul>
+        <li>Let customers spend their Plussa money using the app's barcode, on the device they already use. The app shows your rewards, it should let you claim them the same way you collect them. Removing the limitation is more honest than explaining it.</li>
+        <li>If the limitation has to stay, put the guidance where the money is. When someone sees their Plussa balance, the very next question is "how do I use this?" The instructions for spending it should sit right next to the balance, not buried on a barcode screen no one reads at checkout. Answer the question at the moment the user asks it.</li>
+        <li>Warn before the money expires. The app knows the balance and the expiry date.</li>
+      </ul>
+    </div>
   </section>
-  <section class="sec"><h2 class="sec-label">Update log</h2><p>04.06.2026</p></section>
+  <section class="sec"><h2 class="sec-label">One4all application</h2><p>Coming soon…</p></section>
+  <section class="sec"><h2 class="sec-label">Update log</h2><p>17.07.2026</p></section>
 </main>
 <script src="casestudy.js"></script>
 </body>

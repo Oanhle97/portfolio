@@ -23,6 +23,7 @@
   --stupid-yellow:#E8C547;
   --btn-primary:var(--stupid-yellow);
   --btn-secondary:var(--cream);
+  --nav-next:#9F872F;
 }
 
 *{margin:0;padding:0;box-sizing:border-box;}
