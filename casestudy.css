@@ -1,8 +1,8 @@
 /* Case study + about pages (requires base.css) */
 .cs-sub,.sec p,.sec ul li,.ab-grid p:not(.ab-sub),.ab-grid li,.ab-right li,.ab-left .meta,.ab-quote{font-style:normal;font-weight:400;}
-.ab-grid .ab-sub{font-weight:600;}
+.subhead{font-style:normal;}
 .cs-sub,.sec p,.sec ul li,.ab-grid p,.ab-right li,.ab-quote{text-wrap:pretty;}
-.cs :is(.cs-sub,.cs-meta,.cs-meta-link,.sec p,.sec ul li,.d-title,.d-title .d-num,.ab-left .role,.ab-left .org,.ab-left .meta,.ab-right li,.ab-grid p,.ab-grid li,.ab-sub,.ab-quote,.ab-quote .by,.cs-cap,.ph .ph-label,.ab-contact,.ab-contact-item,.ab-contact-link){line-height:1.5;}
+.cs :is(.cs-sub,.cs-meta,.cs-meta-link,.sec p,.sec ul li,.d-title,.d-title .d-num,.subhead,.ab-left .meta,.ab-right li,.ab-grid p,.ab-grid li,.ab-quote,.ab-quote .by,.cs-cap,.ph .ph-label,.ab-contact,.ab-contact-item,.ab-contact-link){line-height:1.5;}
 
 .cs .rule{margin:54px 0;}
 .cs{position:relative;z-index:1;max-width:var(--maxw-cs);margin:0 auto;padding:48px var(--cs-gutter,40px) 120px;--cs-gutter:40px;}
@@ -40,7 +40,7 @@
   display:block;
   width:auto;
   font-family:var(--heading-font);
-  font-weight:700;
+  font-weight:800;
   font-size:18px;
   font-style:normal;
   letter-spacing:.08em;
@@ -78,7 +78,7 @@
 /* sections */
 .sec{margin-top:0;}
 .sec + .sec{margin-top:40px;}
-.sec-label,.ab-eyebrow{font-family:var(--heading-font);font-weight:700;font-size:18px;letter-spacing:.08em;text-transform:uppercase;color:var(--cream);margin:0 0 24px;}
+.sec-label,.ab-eyebrow{font-family:var(--heading-font);font-weight:800;font-size:18px;letter-spacing:.08em;text-transform:uppercase;color:var(--cream);margin:0 0 24px;}
 .sec-label-row{display:flex;align-items:center;gap:12px;}
 .sec-label-icon{display:block;width:auto;height:1.35em;flex-shrink:0;}
 .sec p{font-size:18px;color:var(--cream);margin:0;}
@@ -93,7 +93,9 @@
 /* decision blocks — subtitles within a section */
 .decision{display:flex;flex-direction:column;gap:0;margin-top:24px;}
 .sec > .decision:first-of-type{margin-top:0;}
-.d-title,.ab-left .role,.ab-sub{font-family:var(--body-font);font-weight:600;font-size:18px;letter-spacing:.02em;text-transform:none;color:var(--cream);margin:0;}
+/* Shared subtitle style (About roles/orgs/skills + detailed-work decision titles) */
+.subhead,
+.d-title{font-family:var(--body-font);font-weight:600;font-size:18px;letter-spacing:.02em;text-transform:none;color:var(--cream);margin:0;line-height:1.5;}
 .d-title .d-num{font-family:var(--body-font);font-weight:500;font-size:18px;margin-right:10px;color:var(--cream);}
 .decision > .d-title + p,
 .decision > .d-title + ul{margin-top:16px;}
@@ -106,7 +108,7 @@
 .ab-row{display:grid;grid-template-columns:220px 1fr;gap:48px;}
 .ab-row + .ab-row{margin-top: 24px;}
 .ab-left{display:flex;flex-direction:column;gap:4px;}
-.ab-left .org{font-size:19px;color:var(--cream);}
+.ab-left .org{color:var(--cream);}
 .ab-org-link{display:inline-flex;align-items:center;gap:6px;color:var(--cream);text-decoration:none;transition:opacity .2s;}
 .ab-org-link:hover{opacity:.7;}
 .ab-org-link .ext-icon{display:block;width:16px;height:16px;flex-shrink:0;}
@@ -124,14 +126,14 @@
 .ab-skills-tools{grid-column:2;grid-row:2;}
 .ab-grid p{font-size:18px;color:var(--cream);margin-bottom:8px;}
 .ab-grid ul{list-style:none;margin-top:4px;}
-.ab-grid li{position:relative;padding-left:22px;font-size:19px;margin-bottom:8px;}
+.ab-grid li{position:relative;padding-left:22px;font-size:18px;margin-bottom:8px;}
 .ab-grid.ab-skills p,
-.ab-grid.ab-skills li,
-.ab-grid.ab-skills .ab-sub{font-size:18px;}
+.ab-grid.ab-skills li{font-size:18px;}
 .ab-grid li::before{content:"";position:absolute;left:2px;top:12px;width:8px;height:3px;background:var(--cream);filter:url(#rough2);}
 .ab-grid .grp,.ab-duo-col .grp{display:flex;flex-direction:column;gap:12px;}
+.ab-grid .grp > p + .subhead{margin-top:12px;}
 .grp-body{display:flex;flex-direction:column;gap:0;}
-.grp-body p{margin:0;}
+.grp-body p{margin:0;font-size:18px;color:var(--cream);}
 .ab-quote{font-size:18px;color:var(--cream);max-width:700px;}
 .ab-duo-col .ab-quote{max-width:none;}
 .ab-quote .by{display:block;margin-top:16px;font-style:normal;font-weight:300;font-size:16px;color:#C1B9A6;}
@@ -139,6 +141,29 @@
 /* Education + Recommendations side by side */
 .ab-duo{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start;}
 .ab-duo-col{min-width:0;}
+
+/* About page body text — same as detailed works .sec p */
+.about-panel :is(
+  .cs-sub:not(.subhead),
+  .ab-left .meta,
+  .ab-right li,
+  .ab-grid p,
+  .ab-grid li,
+  .ab-duo-col .ab-sub:not(.subhead),
+  .grp-body p,
+  .ab-quote,
+  .ab-quote .by,
+  .left-footer .contact,
+  .left-footer .contact .ci
+){
+  font-family:var(--body-font);
+  font-size:18px;
+  font-weight:400;
+  font-style:normal;
+  letter-spacing:normal;
+  line-height:1.5;
+  color:var(--cream);
+}
 
 /* Contact */
 .ab-contact{display:flex;flex-direction:row;flex-wrap:wrap;align-items:center;gap:8px 24px;font-family:var(--body-font);font-size:18px;}
@@ -151,12 +176,59 @@ button.ab-contact-item{background:none;border:none;padding:0;font:inherit;letter
 
 @media(min-width:821px){
   .cs .cs-meta{margin-top:32px;}
-  .cs .cs-sub{margin:24px;}
+  .cs .cs-sub{margin:24px;font-weight:400;}
   .cs .cs-archive-head{padding-left:0;padding-right:8px;}
   .cs .cs-archive-pdf{font-size:16px;}
   .cs .sec p{padding-right:4px;}
-  .cs .sec-label,.cs .ab-eyebrow{font-size:20px;font-weight:800;}
-  .cs .d-title{font-weight:800;}
+  .sec p,
+  .sec ul li,
+  .ab-right li,
+  .ab-quote,
+  .ab-duo-col .ab-quote,
+  .ab-grid p,
+  .ab-grid ul,
+  .ab-grid li,
+  .grp-body p{font-weight:300;}
+  .about-panel :is(
+    .cs-sub:not(.subhead),
+    .ab-left .meta,
+    .ab-right li,
+    .ab-grid p,
+    .ab-grid li,
+    .ab-duo-col .ab-sub:not(.subhead),
+    .grp-body p,
+    .ab-quote,
+    .ab-quote .by,
+    .left-footer .contact,
+    .left-footer .contact .ci
+  ){font-weight:300;}
+  /* List dashes — match following body text (weight/color/size) */
+  .sec ul li::before,
+  .ab-right li::before,
+  .ab-grid li::before{
+    content:"–";
+    left:0;
+    top:0;
+    width:auto;
+    height:auto;
+    background:none;
+    filter:none;
+    font:inherit;
+    font-weight:inherit;
+    color:inherit;
+    line-height:inherit;
+    opacity:1;
+  }
+  .about-panel .flow-arrow{
+    font-size:0.78em;
+    font-weight:inherit;
+    line-height:1;
+    color:currentColor;
+    opacity:0.85;
+    vertical-align:0.08em;
+  }
+  .subhead,
+  .cs .d-title{font-weight:600;}
   .ab-org-link .ext-icon,
   .ab-contact-link .ext-icon{width:24px;height:24px;}
 }
@@ -174,25 +246,36 @@ button.ab-contact-item{background:none;border:none;padding:0;font:inherit;letter
   .ph .ph-label{font-size:14px;}
   .ph .corner{font-size:8px;}
   .cs-cap{font-size:12px;}
-  .sec-label,.ab-eyebrow{font-size:18px;font-weight:800;}
-  .cs-archive-toggle{font-size:16px;}
   .cs-archive-head{padding:0;}
   .sec p,.sec ul li{font-size:16px;}
-  .d-title,.ab-left .role,.ab-sub,.d-title .d-num{font-size:16px;}
+  .subhead,
+  .d-title,
+  .d-title .d-num{font-size:16px;}
   .d-title{font-weight:800;}
-  .ab-left .org{font-size:17px;}
-  .ab-left .meta,.ab-right li,.ab-grid p{font-size:16px;}
-  .ab-grid li{font-size:17px;}
+  .ab-left .meta,.ab-right li,.ab-grid p,.ab-grid li,.grp-body p{font-size:16px;}
   .ab-quote{font-size:16px;}
   .ab-quote .by{font-size:14px;}
+  .about-panel :is(
+    .cs-sub:not(.subhead),
+    .ab-left .meta,
+    .ab-right li,
+    .ab-grid p,
+    .ab-grid li,
+    .ab-duo-col .ab-sub:not(.subhead),
+    .grp-body p,
+    .ab-quote,
+    .ab-quote .by,
+    .left-footer .contact,
+    .left-footer .contact .ci
+  ){font-size:16px;}
+  .about-panel .subhead{font-size:16px;font-weight:600;}
   .ab-row{grid-template-columns:1fr;gap:14px;}
   .ab-grid{grid-template-columns:1fr;gap:26px;}
   .ab-skills{display:flex;flex-direction:column;gap:0;}
   .ab-skills>.grp{grid-column:unset;grid-row:unset;margin-bottom:24px;}
   .ab-skills>.grp:last-child{margin-bottom:0;}
   .ab-grid.ab-skills p,
-  .ab-grid.ab-skills li,
-  .ab-grid.ab-skills .ab-sub{font-size:16px;}
+  .ab-grid.ab-skills li{font-size:16px;}
   .ab-duo{grid-template-columns:1fr;gap:32px;}
   .ab-contact{flex-direction:column;align-items:flex-start;gap:10px;font-size:16px;}
 }
