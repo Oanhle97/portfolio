@@ -131,9 +131,15 @@
 .ab-grid.ab-skills li{font-size:18px;}
 .ab-grid li::before{content:"";position:absolute;left:2px;top:12px;width:8px;height:3px;background:var(--cream);filter:url(#rough2);}
 .ab-grid .grp,.ab-duo-col .grp{display:flex;flex-direction:column;gap:12px;}
-.ab-grid .grp > p + .subhead{margin-top:12px;}
+.ab-grid .grp > .grp-body + .subhead{margin-top:12px;}
 .grp-body{display:flex;flex-direction:column;gap:0;}
 .grp-body p{margin:0;font-size:18px;color:var(--cream);}
+.about-panel .grp-body p + p{margin-top:0;}
+.ab-skills .grp-body > p{margin-bottom:0;}
+.ab-skills-how .grp-body > p:first-child,
+.ab-skills-markets .grp-body > p:first-child{margin-bottom:8px;}
+.ab-skills-domains .grp-body > p{margin-bottom:8px;}
+.ab-skills-domains .grp-body > p:last-child{margin-bottom:0;}
 .ab-quote{font-size:18px;color:var(--cream);max-width:700px;}
 .ab-duo-col .ab-quote{max-width:none;}
 .ab-quote .by{display:block;margin-top:16px;font-style:normal;font-weight:300;font-size:16px;color:#C1B9A6;}
@@ -248,6 +254,14 @@ button.ab-contact-item{background:none;border:none;padding:0;font:inherit;letter
   .cs-cap{font-size:12px;}
   .cs-archive-head{padding:0;}
   .sec p,.sec ul li{font-size:16px;}
+  .sec > p + p,
+  .decision > p + p{margin-top:10px;}
+  .ab-grid p{margin-bottom:10px;}
+  .ab-skills .grp-body > p{margin-bottom:0;}
+  .ab-skills-how .grp-body > p:first-child,
+  .ab-skills-markets .grp-body > p:first-child{margin-bottom:8px;}
+  .ab-skills-domains .grp-body > p{margin-bottom:8px;}
+  .ab-skills-domains .grp-body > p:last-child{margin-bottom:0;}
   .subhead,
   .d-title,
   .d-title .d-num{font-size:16px;}
@@ -268,7 +282,7 @@ button.ab-contact-item{background:none;border:none;padding:0;font:inherit;letter
     .left-footer .contact,
     .left-footer .contact .ci
   ){font-size:16px;}
-  .about-panel .subhead{font-size:16px;font-weight:600;}
+  .about-panel .ab-block:not(.ab-duo) .subhead{font-size:18px;font-weight:600;}
   .ab-row{grid-template-columns:1fr;gap:14px;}
   .ab-grid{grid-template-columns:1fr;gap:26px;}
   .ab-skills{display:flex;flex-direction:column;gap:0;}
